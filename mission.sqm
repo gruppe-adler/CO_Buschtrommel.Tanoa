@@ -494,9 +494,9 @@ class ScenarioData
 {
 	author="Bernhard for Gruppe Adler";
 	overviewText="CSAT-Spezialkräfte für den <t color='#0094FF'>elektronischen Kampf</t><br/>greifen hochautomatisierte NATO-Kräfte an.";
-	overViewPicture="pics\SnS_loadpic.jpg";
+	overViewPicture="pics\buschtrommel_loadpic.jpg.jpg";
 	onLoadMission="CSAT-Spezialkräfte für den <t color='#0094FF'>elektronischen Kampf</t><br/>greifen hochautomatisierte NATO-Kräfte an.";
-	loadScreen="pics\SnS_loadpic.jpg";
+	loadScreen="pics\buschtrommel_loadpic.jpg.jpg";
 	respawnDialog=0;
 	disabledAI=1;
 	respawn=3;
