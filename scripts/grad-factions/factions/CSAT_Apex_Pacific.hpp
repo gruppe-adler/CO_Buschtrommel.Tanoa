@@ -7,7 +7,7 @@ class CSAT_Apex_Pacific {
           "V_HarnessO_ghex_F",
           "V_TacVest_oli"
         };
-        backpack = "";
+        // backpack = "";
         headgear[] = {
             "H_HelmetO_ghex_F",
             "H_HelmetSpecO_ghex_F",
@@ -27,9 +27,12 @@ class CSAT_Apex_Pacific {
         secondaryWeaponPointer = "";
         secondaryWeaponUnderbarrel = "";
         secondaryWeaponUnderbarrelMagazine = "";
-        handgunWeapon = "hgun_Rook40_F";
-        handgunWeaponMagazine = "16Rnd_9x21_Mag";
-        handgunWeaponMuzzle = "";
+        handgunWeapon = "hgun_esd_01_F";    // spectrum device
+        handgunWeaponMuzzle = "muzzle_antenna_03_f";    // jamming antenna
+        handgunWeaponMagazine = "";
+        // handgunWeapon = "hgun_Rook40_F";
+        // handgunWeaponMagazine = "16Rnd_9x21_Mag";
+        // handgunWeaponMuzzle = "";
         handgunWeaponOptics = "";
         handgunWeaponPointer = "";
         handgunWeaponUnderbarrel = "";
@@ -54,7 +57,11 @@ class CSAT_Apex_Pacific {
             LIST_2("SmokeShell"),
             LIST_2("SmokeShellGreen")
         };
-        addItemsToBackpack[] = {};
+        backpack = "B_FieldPack_ghex_F";
+        addItemsToBackpack[] = {
+            LIST_1("ACE_EntrenchingTool"),
+        };
+
     };
 
     class Type {
@@ -104,18 +111,18 @@ class CSAT_Apex_Pacific {
         
         // engineer (incl. electronic warfare)
         class Engineer_F: Soldier_F {
-            handgunWeapon = "hgun_esd_01_F";    // spectrum device
-            handgunWeaponMuzzle = "muzzle_antenna_03_f";    // jamming antenna
-            handgunWeaponMagazine = "";
-            addItemsToUniform[] = {
-                LIST_1("crowsew_tfar_icom")                
-            };
+            // handgunWeapon = "hgun_esd_01_F";    // spectrum device
+            // handgunWeaponMuzzle = "muzzle_antenna_03_f";    // jamming antenna
+            // handgunWeaponMagazine = "";
+            // addItemsToUniform[] = {
+            //     LIST_1("crowsew_tfar_icom")                
+            // };
             backpack = "B_FieldPack_ghex_F";
             addItemsToBackpack[] = {
                 LIST_1("ToolKit"),
                 LIST_1("ACE_EntrenchingTool"),
-                LIST_1("ACE_wirecutter"),
-                LIST_1("muzzle_antenna_01_f")   // military antenna (for TFAR emission detection)
+                LIST_1("ACE_wirecutter")
+                // LIST_1("muzzle_antenna_01_f")   // military antenna (for TFAR emission detection)
             };
         };
         
