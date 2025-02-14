@@ -79,26 +79,14 @@ force ace_rearm_supply = 1; // rearm supply is limited (using credits)
 force ace_rearm_level = 1;  // rearm types of ammo separately (not entire vic at once)
 force ace_towing_addRopeToVehicleInventory = false;  // prevent towing arti with the towing rope
 
-// Artillery Sound Ranging
-force arsr_allowPlacedExplosives = false;
-force arsr_artilleryBaseClassesSetting = "[""RHS_M119_WD""], [""rhssaf_army_o_d30""], [""APC_Wheeled_01_mortar_base_lxWS""], [""B_D_APC_Wheeled_01_mortar_lxWS""], [""B_T_APC_Wheeled_01_mortar_lxWS""], [""O_Mortar_01_F""], [""B_Mortar_01_F""], [""B_T_Mortar_01_F""], [""B_D_Mortar_01_lxWS""]";
-force arsr_autoDeleteMarkerTime = 40;	// in seconds
-force arsr_explosivesAddSide = true;
-force arsr_explosivesMinHit = 500;
-force arsr_angleError = 3;	// in degree (as passed into "random [min, mid, max]")
-force arsr_listenerCalcDelay = 0;	// default 20
-force arsr_listenerClassesSetting = "[""UK3CB_CHD_O_Gaz66_Radio"", ""UK3CB_CHD_W_B_Gaz66_Radio""]";
-force arsr_listenerMaxDistance = 20000;	// in meters
-arsr_markerColor = "Default";
-force arsr_speedOfSound = 1500; // realistic sound traveling time would be 343 (but this is to slow for good counter battery action)
-force arsr_vicEngineOff = true;
-force arsr_vicStationary = true;
-
 // Crows Electronic Warfare
 force crowsEW_spectrum_spectrumEnable = true;	// enable Spectrum Device
 force crowsEW_spectrum_selfTracking = true;		// show own radio emissions
 force crowsEW_spectrum_tfarSideTrack = true;	// show friendly radio emissions
 force crowsEW_spectrum_minJamSigStrength = -50;	// (in dBm); minimum signal strength necessary in Spectrum Device for jamming
+force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F,B_SAM_System_01_F,B_SAM_System_02_F,B_Ship_MRLS_01_F,B_Ship_Gun_01_F,B_AAA_System_01_F,B_GMG_01_A_F,B_HMG_01_A_F,B_T_Boat_Armed_01_minigun_F";
+force crowsEW_spectrum_defaultRangesForJammingSignal = "3001,3002,3003,10004,10005,10006,10007,3008,5009,5010,5011,5012,5013,3014,3015,3016";
+
 
 
 
