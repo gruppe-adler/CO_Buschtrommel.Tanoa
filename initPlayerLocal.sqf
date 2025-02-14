@@ -26,3 +26,11 @@ opfor_vls addEventHandler ["Fired", {
     diag_log format ["initPlayerLocal.sqf Fired_EH: _projectile = '%1', _gunner = '%2', _magazine = '%3'", _projectile, _gunner, _magazine];
     ["cruise_missile_live_feed_event", [_projectile, _gunner, _magazine]] call CBA_fnc_globalEvent;     // send video source and target to other machines
 }];        
+
+
+// prevent players from remote controlling the SAM turrets
+["loadout", {
+    params ["_unit", "_newUnitLoadout", "_oldUnitLoadout"];
+    player disableUAVConnectability [small_SAM, true];
+    player disableUAVConnectability [large_SAM, true];
+}] call CBA_fnc_addPlayerEventHandler;
