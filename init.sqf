@@ -29,10 +29,15 @@ fnc_DeactivateJammerOnLoad = {
         params ["_explosive", "_pos", "_velocity"];
 
         {
-            if (typeOf _x == "Submarine_01_F") then {
+            if (typeOf _x in ["Submarine_01_F", "Land_Plank_01_8m_F", "Land_Cargo20_military_green_F", "C_Man_ConstructionWorker_01_Blue_F"]) then {
+                private _altitudeOffset = -6.50;
+                if (_x == uboat_1) then { _altitudeOffset = -12.50 };
+                if (_x == uboat_3) then { container_guy setDamage 1.0; };   // make sure guy on container is killed
+
                 private _uboat_pos = getPosASL _x;
-                _x setPosASL [_uboat_pos#0, _uboat_pos#1, -6.50];     // sink into ground
+                _x setPosASL [_uboat_pos#0, _uboat_pos#1, _uboat_pos#2 + _altitudeOffset];     // sink into ground
+                _x setVectorDirAndUp ([[vectorDirVisual _x, vectorUpVisual _x], 0, 10, 10] call BIS_fnc_transformVectorDirAndUp);   // roll and pitch a bit
             };     
-        } forEach (_pos nearObjects 50);
+        } forEach (_pos nearObjects 60);
     }];
 }] call CBA_fnc_addEventHandler;
