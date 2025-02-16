@@ -41,3 +41,14 @@ fnc_DeactivateJammerOnLoad = {
         } forEach (_pos nearObjects 60);
     }];
 }] call CBA_fnc_addEventHandler;
+
+
+// disable thermal optics of drones because those don't support the FilmGrain effect of the jammers
+{
+    [_x, "init",{
+        params ["_vehicle"];
+        _vehicle disableTIEquipment true;   // disable thermal imaging
+        // _vehicle disableNVGEquipment true;  // disable night vision imaging
+        // _vehicle removeMagazinesTurret ["Laserbatteries", [0]];   // disable laser designator
+    }, true, [], true] call CBA_fnc_addClassEventHandler;
+} forEach ([crowsEW_spectrum_defaultClassForJammingSignal, ","] call BIS_fnc_splitString);

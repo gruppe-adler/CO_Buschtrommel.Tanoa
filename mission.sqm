@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=9;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=5769;
+		nextID=5795;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13222.516,35.713863,12446.786};
-		dir[]={0.58221519,-0.38526788,-0.7159605};
-		up[]={0.24307287,0.92280251,-0.29891095};
-		aside[]={-0.77585196,-8.3076884e-08,-0.6309185};
+		pos[]={13949.187,155.2704,12452.817};
+		dir[]={0.15890263,-0.52702689,-0.83487332};
+		up[]={0.098542333,0.84984601,-0.51773673};
+		aside[]={-0.98237395,-2.1745655e-07,-0.18697979};
 	};
 };
 binarizationWanted=0;
@@ -78,7 +78,6 @@ addons[]=
 	"A3_Modules_F_Curator_Curator",
 	"A3_Weapons_F_Enoch_Pistols_ESD",
 	"crowsEW_spectrum",
-	"A3_Weapons_F_Enoch_Items",
 	"A3_Soft_F_Exp_UGV_01",
 	"A3_Static_F",
 	"A3_Structures_F_Training",
@@ -93,8 +92,12 @@ addons[]=
 	"A3_Structures_F_Exp_Industrial_Port",
 	"A3_Characters_F_Orange",
 	"CUP_A_Crane_02",
-	"A3_Structures_F_Enoch_Military_Training",
 	"crowsEW_editormodules",
+	"A3_Props_F_Enoch_Military_Equipment",
+	"A3_Props_F_Enoch_Military_Decontamination",
+	"A3_Props_F_Enoch_Military_Camps",
+	"A3_Structures_F_Heli_Ind_Cargo",
+	"A3_Structures_F_Enoch_Military_Training",
 	"A3_Props_F_Exp_A_Military_Equipment",
 	"A3_Static_F_Destroyer_Ship_MRLS_01",
 	"A3_Boat_F_Destroyer_Destroyer_01",
@@ -112,7 +115,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=52;
+		items=54;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -408,60 +411,74 @@ class AddonsMetaData
 		};
 		class Item43
 		{
+			className="crowsEW_editormodules";
+			name="editormodules";
+			author="Crowdedlight";
+		};
+		class Item44
+		{
+			className="A3_Props_F_Enoch";
+			name="Arma 3 Contact Platform - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item45
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item46
+		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item44
-		{
-			className="crowsEW_editormodules";
-			name="editormodules";
-			author="Crowdedlight";
-		};
-		class Item45
+		class Item47
 		{
 			className="A3_Props_F_Exp_A";
 			name="Arma 3 Nexus Update - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item46
+		class Item48
 		{
 			className="A3_Static_F_Destroyer";
 			name="CFGPATCHES_A3_Static_F_Destroyer";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item47
+		class Item49
 		{
 			className="A3_Boat_F_Destroyer";
 			name="Arma 3 Jets - Boats and Submersibles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item48
+		class Item50
 		{
 			className="A3_Static_F_Jets";
 			name="Arma 3 Jets - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item49
+		class Item51
 		{
 			className="A3_Soft_F_Orange";
 			name="Arma 3 Orange - Unarmored Land Vehicles";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item50
+		class Item52
 		{
 			className="A3_Props_F_Exp";
 			name="Arma 3 Apex - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item51
+		class Item53
 		{
 			className="A3_Ui_F";
 			name="Arma 3 - User Interface";
@@ -477,6 +494,8 @@ dlcs[]=
 	"Enoch",
 	"Argo",
 	"ORANGE",
+	"Heli",
+	"Contact",
 	"Jets"
 };
 randomSeed=10095693;
@@ -494,7 +513,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category1
+	class Category0
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -531,7 +550,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category2
+	class Category1
 	{
 		name="Scenario";
 		class Attribute0
@@ -1169,7 +1188,7 @@ class Mission
 					class Attributes
 					{
 						rank="CAPTAIN";
-						init="this setVariable [""arsr_receptionAllowed"", true]; " \n "";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="CMD@Command";
 						isPlayable=1;
 						class Inventory
@@ -1345,7 +1364,7 @@ class Mission
 					class Attributes
 					{
 						rank="LIEUTENANT";
-						init="this setVariable [""arsr_receptionAllowed"", true]; " \n "";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="2iC@Command";
 						isPlayable=1;
 						stance="Middle";
@@ -1536,7 +1555,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="this setVariable [""arsr_receptionAllowed"", true]; " \n "";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="UAV@Recon-A";
 						isPlayable=1;
 						class Inventory
@@ -1661,7 +1680,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
-						init="this setVariable [""arsr_receptionAllowed"", true]; " \n "";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="UAV@Recon-B";
 						isPlayable=1;
 						class Inventory
@@ -1786,6 +1805,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="6: Combat Life Saver";
 						isPlayable=1;
 						class Inventory
@@ -1957,6 +1977,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="Marksman";
 						isPlayable=1;
 						class Inventory
@@ -2088,6 +2109,7 @@ class Mission
 					class Attributes
 					{
 						rank="SERGEANT";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="SQL@Hunter-A";
 						isPlayable=1;
 						class Inventory
@@ -2277,6 +2299,7 @@ class Mission
 					{
 						skill=0.44999999;
 						rank="CORPORAL";
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="Autorifleman";
 						isPlayable=1;
 						class Inventory
@@ -2392,6 +2415,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="Grenadier";
 						isPlayable=1;
 					};
@@ -2412,6 +2436,7 @@ class Mission
 					class Attributes
 					{
 						skill=0.40000001;
+						init="this setUnitTrait [""UAVHacker"", true];";
 						description="Engineer (incl. electronic warfare)";
 						isPlayable=1;
 						class Inventory
@@ -4093,30 +4118,14 @@ class Mission
 							};
 							class backpack
 							{
-								typeName="B_AssaultPack_rgr";
+								typeName="I_UAV_01_backpack_F";
 								isBackpack=1;
-								class MagazineCargo
-								{
-									items=2;
-									class Item0
-									{
-										name="DemoCharge_Remote_Mag";
-										count=4;
-										ammoLeft=1;
-									};
-									class Item1
-									{
-										name="SatchelCharge_Remote_Mag";
-										count=1;
-										ammoLeft=1;
-									};
-								};
 							};
 							map="ItemMap";
 							compass="ItemCompass";
 							watch="ItemWatch";
 							radio="ItemRadio";
-							gps="I_E_UavTerminal";
+							gps="I_UavTerminal";
 							headgear="H_MilCap_gry";
 						};
 					};
@@ -4340,7 +4349,7 @@ class Mission
 					};
 					id=5509;
 					type="B_UAV_AI";
-					atlOffset=2.3841858e-07;
+					atlOffset=-7.1525574e-07;
 				};
 				class Item1
 				{
@@ -4351,13 +4360,13 @@ class Mission
 						angles[]={0,2.7452826,0};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
 					};
 					id=5510;
 					type="B_UAV_AI";
-					atlOffset=2.0893385;
+					atlOffset=-7.1525574e-07;
 				};
 				class Item2
 				{
@@ -4378,7 +4387,7 @@ class Mission
 				{
 					dataType="Waypoint";
 					loiterAltitude=-3.4028235e+38;
-					position[]={13970.808,2.55,12393.845};
+					position[]={14015.833,2.5499995,12323.866};
 					class Effects
 					{
 					};
@@ -4388,6 +4397,7 @@ class Mission
 					showWP="NEVER";
 					id=5513;
 					type="Cycle";
+					atlOffset=-4.7683716e-07;
 				};
 			};
 			class Attributes
@@ -4426,14 +4436,14 @@ class Mission
 				};
 			};
 			id=5508;
-			atlOffset=-2.3841858e-07;
+			atlOffset=-7.1525574e-07;
 		};
 		class Item16
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={13968.401,4.6393385,12400.362};
+				position[]={14013.427,4.639338,12330.384};
 				angles[]={0,2.7452826,0};
 			};
 			side="West";
@@ -4444,7 +4454,7 @@ class Mission
 			};
 			id=5511;
 			type="B_T_UGV_01_rcws_olive_F";
-			atlOffset=-2.3841858e-07;
+			atlOffset=-7.1525574e-07;
 		};
 		class Item17
 		{
@@ -4585,7 +4595,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=31;
+				items=40;
 				class Item0
 				{
 					dataType="Logic";
@@ -4951,7 +4961,7 @@ class Mission
 											class data
 											{
 												singleType="SCALAR";
-												value=2;
+												value=10;
 											};
 										};
 										class Item1
@@ -6145,9 +6155,347 @@ class Mission
 					type="Land_Plank_01_8m_F";
 					atlOffset=9.9961452;
 				};
+				class Item31
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13483.24,2.5497649,12167.242};
+					};
+					id=5775;
+					type="crowsEW_editormodules_moduleAddJammer";
+					atlOffset=3.516;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="crowsEW_editormodules_addjammer_strength";
+							expression="_this setVariable ['FalloffRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=800;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="crowsEW_editormodules_addjammer_isActiveAtMissionStart";
+							expression="_this setVariable ['IsActiveAtMissionStart',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="crowsEW_editormodules_addjammer_isVoiceCommsJammer";
+							expression="_this setVariable ['IsVoiceCommsJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="crowsEW_editormodules_addjammer_isDroneJammer";
+							expression="_this setVariable ['IsDroneJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="crowsEW_editormodules_addjammer_radius";
+							expression="_this setVariable ['EffectiveRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item32
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13482.503,2.787962,12166.93};
+						angles[]={0,4.3536186,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=5778;
+					type="Land_Computer_01_black_F";
+				};
+				class Item33
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13482.829,3.2927859,12167.328};
+						angles[]={1.6145906,3.1824632,1.2016318};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=5780;
+					type="PowerCable_01_Corner_F";
+					atlOffset=0.71025681;
+				};
+				class Item34
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13288.88,2.5560417,12399.49};
+					};
+					id=5782;
+					type="crowsEW_editormodules_moduleAddJammer";
+					atlOffset=0.0060417652;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="crowsEW_editormodules_addjammer_strength";
+							expression="_this setVariable ['FalloffRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=800;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="crowsEW_editormodules_addjammer_isActiveAtMissionStart";
+							expression="_this setVariable ['IsActiveAtMissionStart',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="crowsEW_editormodules_addjammer_isVoiceCommsJammer";
+							expression="_this setVariable ['IsVoiceCommsJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="crowsEW_editormodules_addjammer_isDroneJammer";
+							expression="_this setVariable ['IsDroneJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="crowsEW_editormodules_addjammer_radius";
+							expression="_this setVariable ['EffectiveRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item35
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13288.537,4.2213187,12399.11};
+						angles[]={0,5.4998193,-0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=5786;
+					type="SatelliteAntenna_01_Small_Mounted_Sand_F";
+					atlOffset=1.1617692;
+				};
+				class Item36
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13483.041,3.6723583,12166.827};
+						angles[]={0,1.9846487,0};
+					};
+					side="Empty";
+					class Attributes
+					{
+					};
+					id=5787;
+					type="SatelliteAntenna_01_Small_Mounted_Sand_F";
+					atlOffset=0.6100893;
+				};
+				class Item37
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13289.774,3.9028883,12397.78};
+						angles[]={0,3.9442539,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=5784;
+					type="Land_Cargo10_white_F";
+					atlOffset=2.3841858e-07;
+				};
+				class Item38
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13815.117,13.46345,11952.1};
+						angles[]={0,1.3844398,-0};
+					};
+					side="Empty";
+					flags=4;
+					class Attributes
+					{
+					};
+					id=5791;
+					type="OmniDirectionalAntenna_01_sand_F";
+					atlOffset=0.0058174133;
+				};
+				class Item39
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13815.345,11.415999,11950.876};
+					};
+					id=5792;
+					type="crowsEW_editormodules_moduleAddJammer";
+					atlOffset=19.445999;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="crowsEW_editormodules_addjammer_strength";
+							expression="_this setVariable ['FalloffRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=800;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="crowsEW_editormodules_addjammer_isActiveAtMissionStart";
+							expression="_this setVariable ['IsActiveAtMissionStart',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="crowsEW_editormodules_addjammer_isVoiceCommsJammer";
+							expression="_this setVariable ['IsVoiceCommsJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="crowsEW_editormodules_addjammer_isDroneJammer";
+							expression="_this setVariable ['IsDroneJammer',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="crowsEW_editormodules_addjammer_radius";
+							expression="_this setVariable ['EffectiveRadius',_value,true];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
 			};
 			id=5538;
-			atlOffset=0.19080567;
+			atlOffset=18.735346;
 		};
 		class Item22
 		{
@@ -7901,11 +8249,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=9;
+			nextID=12;
 		};
 		class Links
 		{
-			items=9;
+			items=12;
 			class Item0
 			{
 				linkID=0;
@@ -7991,6 +8339,36 @@ class Mission
 				linkID=8;
 				item0=5706;
 				item1=5696;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item9
+			{
+				linkID=9;
+				item0=5775;
+				item1=5787;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item10
+			{
+				linkID=10;
+				item0=5782;
+				item1=5786;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item11
+			{
+				linkID=11;
+				item0=5792;
+				item1=5791;
 				class CustomData
 				{
 					type="Sync";
