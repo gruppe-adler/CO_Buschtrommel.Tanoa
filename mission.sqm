@@ -8,7 +8,7 @@ class EditorData
 	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=5795;
+		nextID=5803;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13949.187,155.2704,12452.817};
-		dir[]={0.15890263,-0.52702689,-0.83487332};
-		up[]={0.098542333,0.84984601,-0.51773673};
-		aside[]={-0.98237395,-2.1745655e-07,-0.18697979};
+		pos[]={13353.615,53.642395,12146.511};
+		dir[]={-1.2363449e-07,-0.70710683,0.70710683};
+		up[]={-1.2363449e-07,0.70710671,0.70710683};
+		aside[]={1,0,1.7484557e-07};
 	};
 };
 binarizationWanted=0;
@@ -4349,7 +4349,7 @@ class Mission
 					};
 					id=5509;
 					type="B_UAV_AI";
-					atlOffset=-7.1525574e-07;
+					atlOffset=2.3841858e-07;
 				};
 				class Item1
 				{
@@ -4360,13 +4360,13 @@ class Mission
 						angles[]={0,2.7452826,0};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=5510;
 					type="B_UAV_AI";
-					atlOffset=-7.1525574e-07;
+					atlOffset=2.0893385;
 				};
 				class Item2
 				{
@@ -4595,7 +4595,7 @@ class Mission
 			state=1;
 			class Entities
 			{
-				items=40;
+				items=48;
 				class Item0
 				{
 					dataType="Logic";
@@ -4830,7 +4830,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13397.443,4.675674,12155.716};
+						position[]={13347.497,4.6756735,12176.901};
 						angles[]={0,0.40250137,0};
 					};
 					side="Empty";
@@ -4840,6 +4840,7 @@ class Mission
 					};
 					id=5653;
 					type="Jbad_freight_trailer";
+					atlOffset=-4.7683716e-07;
 				};
 				class Item10
 				{
@@ -5086,7 +5087,7 @@ class Mission
 					{
 					};
 					id=5685;
-					atlOffset=60.779999;
+					atlOffset=11.587001;
 				};
 				class Item20
 				{
@@ -5951,7 +5952,7 @@ class Mission
 						position[]={13776.071,2.5440526,11838.658};
 						angles[]={0,0,6.2820859};
 					};
-					name="crane_timeline";
+					name="crane_timeline_1";
 					id=5695;
 					type="Timeline_F";
 					class CustomAttributes
@@ -6126,8 +6127,8 @@ class Mission
 					position[]={13782.052,2.55,11816.889};
 					class Attributes
 					{
-						name="crane_trigger";
-						onActivation="[crane_timeline] call BIS_fnc_timeline_play;";
+						name="crane_trigger_1";
+						onActivation="[crane_timeline_1] call BIS_fnc_timeline_play;";
 						sizeA=150;
 						sizeB=150;
 						timeout[]={5,10,15};
@@ -6493,9 +6494,1034 @@ class Mission
 						nAttributes=5;
 					};
 				};
+				class Item40
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13367.052,2.55,12189.948};
+						angles[]={6.2820859,1.5825423,0};
+					};
+					id=5795;
+					type="Curve_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="TimeInSeconds";
+							expression="_this setVariable ['TimeInSeconds',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="3DENDrawPrecisionDrag";
+							expression="_this setVariable ['3DENDrawPrecisionDrag',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.25;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="3DENDrawPrecision";
+							expression="_this setVariable ['3DENDrawPrecision',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.25;
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="OrientationMode";
+							expression="_this setVariable ['OrientationMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="LookAt";
+							expression="_this setVariable ['LookAt',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="[-1,<NULL-object>]";
+								};
+							};
+						};
+						nAttributes=5;
+					};
+				};
+				class Item41
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13353.615,2.55,12191.38};
+						angles[]={0,1.5825423,0};
+					};
+					name="crane_4";
+					id=5796;
+					type="Key_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="LeaveTangentWeight";
+							expression="_this setVariable ['LeaveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="InterpMode";
+							expression="_this setVariable ['InterpMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ArriveTangent";
+							expression="_this setVariable ['ArriveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ArriveTangentWeight";
+							expression="_this setVariable ['ArriveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Event";
+							expression="_this setVariable ['Event',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="playSound3D [""z\crowsEW\addons\sounds\data\machine_open.ogg"", crane_long];";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="LeaveTangent";
+							expression="_this setVariable ['LeaveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="LockControlPoints";
+							expression="_this setVariable ['LockControlPoints',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Time";
+							expression="_this setVariable ['Time',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="CameraFOV";
+							expression="_this setVariable ['CameraFOV',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.75;
+								};
+							};
+						};
+						nAttributes=9;
+					};
+				};
+				class Item42
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13344.507,2.55,12168.225};
+						angles[]={0,1.5825423,0};
+					};
+					name="crane_5";
+					id=5797;
+					type="Key_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="LeaveTangentWeight";
+							expression="_this setVariable ['LeaveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="InterpMode";
+							expression="_this setVariable ['InterpMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ArriveTangent";
+							expression="_this setVariable ['ArriveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ArriveTangentWeight";
+							expression="_this setVariable ['ArriveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Event";
+							expression="_this setVariable ['Event',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="playSound3D [""z\crowsEW\addons\sounds\data\machine_open.ogg"", crane_long];";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="LeaveTangent";
+							expression="_this setVariable ['LeaveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="LockControlPoints";
+							expression="_this setVariable ['LockControlPoints',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Time";
+							expression="_this setVariable ['Time',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=5;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="CameraFOV";
+							expression="_this setVariable ['CameraFOV',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.75;
+								};
+							};
+						};
+						nAttributes=9;
+					};
+				};
+				class Item43
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13377.536,2.55,12247.604};
+						angles[]={0,1.5825423,0};
+					};
+					name="crane_6";
+					id=5798;
+					type="Key_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="LeaveTangentWeight";
+							expression="_this setVariable ['LeaveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="InterpMode";
+							expression="_this setVariable ['InterpMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ArriveTangent";
+							expression="_this setVariable ['ArriveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ArriveTangentWeight";
+							expression="_this setVariable ['ArriveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Event";
+							expression="_this setVariable ['Event',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="playSound3D [""z\crowsEW\addons\sounds\data\machine_open.ogg"", crane_long];";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="LeaveTangent";
+							expression="_this setVariable ['LeaveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="LockControlPoints";
+							expression="_this setVariable ['LockControlPoints',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Time";
+							expression="_this setVariable ['Time',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=15;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="CameraFOV";
+							expression="_this setVariable ['CameraFOV',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.75;
+								};
+							};
+						};
+						nAttributes=9;
+					};
+				};
+				class Item44
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13353.615,2.55,12191.38};
+						angles[]={0,1.5825423,0};
+					};
+					name="crane_7";
+					id=5799;
+					type="Key_F";
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="LeaveTangentWeight";
+							expression="_this setVariable ['LeaveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="InterpMode";
+							expression="_this setVariable ['InterpMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="ArriveTangent";
+							expression="_this setVariable ['ArriveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="ArriveTangentWeight";
+							expression="_this setVariable ['ArriveTangentWeight',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=10;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Event";
+							expression="_this setVariable ['Event',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="playSound3D [""z\crowsEW\addons\sounds\data\machine_open.ogg"", crane_long];";
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="LeaveTangent";
+							expression="_this setVariable ['LeaveTangent',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="ARRAY";
+									class value
+									{
+										items=3;
+										class Item0
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item1
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+										class Item2
+										{
+											class data
+											{
+												singleType="SCALAR";
+												value=0;
+											};
+										};
+									};
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="LockControlPoints";
+							expression="_this setVariable ['LockControlPoints',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="Time";
+							expression="_this setVariable ['Time',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=20;
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="CameraFOV";
+							expression="_this setVariable ['CameraFOV',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0.75;
+								};
+							};
+						};
+						nAttributes=9;
+					};
+				};
+				class Item45
+				{
+					dataType="Logic";
+					class PositionInfo
+					{
+						position[]={13371.427,2.5439999,12195.921};
+						angles[]={6.2820859,1.5825423,0};
+					};
+					name="crane_timeline_2";
+					id=5800;
+					type="Timeline_F";
+					atlOffset=-0.006000042;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="Length";
+							expression="_this setVariable ['Length',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=30;
+								};
+							};
+						};
+						class Attribute1
+						{
+							property="PlayRate";
+							expression="_this setVariable ['PlayRate',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=1;
+								};
+							};
+						};
+						class Attribute2
+						{
+							property="EventStarted";
+							expression="_this setVariable ['EventStarted',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="true";
+								};
+							};
+						};
+						class Attribute3
+						{
+							property="InterpMode";
+							expression="_this setVariable ['InterpMode',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="SCALAR";
+									value=0;
+								};
+							};
+						};
+						class Attribute4
+						{
+							property="Paused";
+							expression="_this setVariable ['Paused',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute5
+						{
+							property="EventLooped";
+							expression="_this setVariable ['EventLooped',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="true";
+								};
+							};
+						};
+						class Attribute6
+						{
+							property="Reverse";
+							expression="_this setVariable ['Reverse',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute7
+						{
+							property="EventFinished";
+							expression="_this setVariable ['EventFinished',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="true";
+								};
+							};
+						};
+						class Attribute8
+						{
+							property="DestroyWhenFinished";
+							expression="_this setVariable ['DestroyWhenFinished',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						class Attribute9
+						{
+							property="PlayFromStart";
+							expression="_this setVariable ['PlayFromStart',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=1;
+								};
+							};
+						};
+						class Attribute10
+						{
+							property="Loop";
+							expression="_this setVariable ['Loop',_value];";
+							class Value
+							{
+								class data
+								{
+									singleType="BOOL";
+									value=0;
+								};
+							};
+						};
+						nAttributes=11;
+					};
+				};
+				class Item46
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={13353.611,12.080889,12191.376};
+						angles[]={0,0.40137336,0};
+					};
+					side="Empty";
+					flags=5;
+					class Attributes
+					{
+						name="crane_long";
+					};
+					id=5801;
+					type="Land_GantryCrane_01_F";
+					atlOffset=2.3841858e-07;
+				};
+				class Item47
+				{
+					dataType="Trigger";
+					position[]={13349.589,2.55,12190.196};
+					angle=1.5825421;
+					class Attributes
+					{
+						name="crane_trigger_2";
+						onActivation="[crane_timeline_2] call BIS_fnc_timeline_play;";
+						sizeA=150;
+						sizeB=150;
+						timeout[]={5,10,15};
+						repeatable=1;
+						activationBy="ANYPLAYER";
+						triggerInterval=5;
+					};
+					id=5802;
+					type="EmptyDetectorAreaR50";
+				};
 			};
 			id=5538;
-			atlOffset=18.735346;
+			atlOffset=0.025550842;
 		};
 		class Item22
 		{
@@ -8249,11 +9275,11 @@ class Mission
 	{
 		class LinkIDProvider
 		{
-			nextID=12;
+			nextID=18;
 		};
 		class Links
 		{
-			items=12;
+			items=18;
 			class Item0
 			{
 				linkID=0;
@@ -8369,6 +9395,66 @@ class Mission
 				linkID=11;
 				item0=5792;
 				item1=5791;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item12
+			{
+				linkID=12;
+				item0=5795;
+				item1=5800;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item13
+			{
+				linkID=13;
+				item0=5796;
+				item1=5795;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item14
+			{
+				linkID=14;
+				item0=5799;
+				item1=5795;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item15
+			{
+				linkID=15;
+				item0=5801;
+				item1=5795;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item16
+			{
+				linkID=16;
+				item0=5797;
+				item1=5795;
+				class CustomData
+				{
+					type="Sync";
+				};
+			};
+			class Item17
+			{
+				linkID=17;
+				item0=5798;
+				item1=5795;
 				class CustomData
 				{
 					type="Sync";
