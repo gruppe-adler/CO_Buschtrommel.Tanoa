@@ -2,6 +2,7 @@
 
 class CfgFunctions {
     createShortcuts = 1;
+    #include "scripts\diary\funcs.hpp"                  // diary used for some on-demand scripts
     #include "scripts\stomper\funcs.hpp"                // enable sitting on Stomper UGV
     #include "scripts\grad-loadout\CfgFunctions.hpp"    // Gruppe Adler loadout handling
 };
