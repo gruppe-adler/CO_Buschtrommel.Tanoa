@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=711;
+		nextID=720;
 	};
 	class Camera
 	{
-		pos[]={13761.828,202.42407,10945.911};
-		dir[]={0.8800447,-0.29879516,-0.36911643};
-		up[]={0.27554056,0.95431817,-0.11556979};
-		aside[]={-0.38678595,1.2901728e-07,-0.92217314};
+		pos[]={13762.49,201.96307,10945.959};
+		dir[]={0.86597043,-0.15728393,-0.47472093};
+		up[]={0.13792035,0.98755366,-0.075607195};
+		aside[]={-0.48070377,7.5669959e-08,-0.87688613};
 	};
 };
 binarizationWanted=0;
@@ -11260,7 +11260,7 @@ class Mission
 					{
 						text="WTF are you going?";
 						condition="{  if (typeOf _x == ""B_T_UGV_01_rcws_olive_F"") exitWith { true } } forEach thislist;";
-						onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "hint ""WTF... where are you going? o_O"";";
+						onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "[""<t color='#99ffffff'>Mechanic</t>: WTF... where are you going? o_O""] spawn BIS_fnc_dynamicText;";
 						sizeA=4;
 						sizeB=7;
 						activationBy="ANY";
@@ -12740,7 +12740,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13760.07,178.05061,10943.532};
-						angles[]={0,2.0361543,-0};
+						angles[]={0,2.0361543,0};
 					};
 					side="Empty";
 					flags=5;
@@ -12757,7 +12757,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13756.037,178.02229,10950.237};
-						angles[]={0,3.5804594,-0};
+						angles[]={0,3.5804594,0};
 					};
 					side="Empty";
 					flags=5;
@@ -12774,7 +12774,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13762.418,177.88116,10949.784};
-						angles[]={0,3.5804594,-0};
+						angles[]={0,3.5804594,0};
 					};
 					side="Empty";
 					flags=5;
@@ -13073,12 +13073,28 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setObjectTexture [0, ""\A3\Missions_F_Oldman\Data\img\Screens\CSATNtb_co.paa""];";
 						name="driver_cam_screen";
 					};
 					id=7246;
 					type="Land_TripodScreen_01_large_F";
 					atlOffset=0.019668579;
+					class CustomAttributes
+					{
+						class Attribute0
+						{
+							property="ObjectTextureCustom0";
+							expression="_this setObjectTextureGlobal [0,_value]";
+							class Value
+							{
+								class data
+								{
+									singleType="STRING";
+									value="#(argb,8,8,3)color(0,0,0,0.0,co)";
+								};
+							};
+						};
+						nAttributes=1;
+					};
 				};
 				class Item16
 				{
@@ -13092,7 +13108,6 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="this setObjectTexture [0, ""\A3\Missions_F_Oldman\Data\img\Screens\CSATNtb_co.paa""];";
 						name="gunner_cam_screen";
 					};
 					id=7359;
@@ -13105,7 +13120,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13764.829,200.815,10944.707};
-						angles[]={0,2.0156288,-0};
+						angles[]={0,2.0156288,0};
 					};
 					side="Empty";
 					flags=4;
@@ -13127,7 +13142,7 @@ class Mission
 					side="Empty";
 					class Attributes
 					{
-						init="this setObjectTexture [1, ""\A3\Missions_F_Oldman\Data\img\Screens\CSATNtbDesktop_co.paa""];" \n "" \n "this addAction [""Look for Layer-8 problems in NATO network"", { " \n "    params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];" \n "    hintC ""You took over control of an enemy Stomper.""; " \n "    [maintenance_stomper] joinSilent (createGroup side _caller);" \n "    _caller connectTerminalToUAV maintenance_stomper;" \n "    [""rtt_event_startRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 6]; " \n "    " \n "    " \n "    " \n "    " \n "";
+						init="this setObjectTexture [1, ""a3\data_f\flags\flag_NATO_co.paa""];" \n "" \n "this addAction [""<t color='#00FF00'>Look for Layer-8 problems in NATO network</t>"", { " \n "    params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];" \n "    hintC format [""You took over control of an enemy Stomper at grid %1."", mapGridPosition maintenance_stomper]; " \n "    [maintenance_stomper] joinSilent (createGroup side _caller);" \n "    _caller connectTerminalToUAV maintenance_stomper;" \n "    [""rtt_event_startRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 5]; " \n "    " \n "    " \n "this addAction [""<t color='#FF0000'>End video stream</t>"", { " \n "    [""rtt_event_stopRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 6, true, true, """", ""side _this == side maintenance_stomper""]; " \n "";
 					};
 					id=7363;
 					type="Land_Laptop_03_olive_F_AE3";
@@ -13155,7 +13170,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13758.059,200.89673,10953.157};
-						angles[]={0,2.0051689,-0};
+						angles[]={0,2.0051689,0};
 					};
 					side="Empty";
 					flags=4;
