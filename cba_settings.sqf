@@ -14,8 +14,8 @@ force crowsEW_spectrum_spectrumEnable = true;	// enable Spectrum Device
 force crowsEW_spectrum_selfTracking = true;		// show own radio emissions
 force crowsEW_spectrum_tfarSideTrack = true;	// show friendly radio emissions
 force crowsEW_spectrum_minJamSigStrength = -50;	// (in dBm); minimum signal strength necessary in Spectrum Device for jamming
-force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F,B_SAM_System_01_F,B_SAM_System_02_F,B_Ship_MRLS_01_F,B_Ship_Gun_01_F,B_AAA_System_01_F,B_GMG_01_A_F,B_HMG_01_A_F,B_T_Boat_Armed_01_minigun_F";
-force crowsEW_spectrum_defaultRangesForJammingSignal = "3001,3002,3003,10004,10005,10006,10007,3008,5009,5010,5011,5012,5013,3014,3015,3016";
+force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F,B_SAM_System_01_F,B_SAM_System_02_F,B_Ship_MRLS_01_F,B_Ship_Gun_01_F,B_AAA_System_01_F,B_GMG_01_A_F,B_HMG_01_A_F,B_T_Boat_Armed_01_minigun_F,B_W_Static_Designator_01_F";
+force crowsEW_spectrum_defaultRangesForJammingSignal = "3001,3002,3003,10004,10005,10006,10007,3008,5009,5010,5011,5012,5013,3014,3015,3016,3017";
 
 
 
