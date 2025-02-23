@@ -139,7 +139,7 @@ force ace_parachute_hideAltimeter = false;
 // ace_tagging_quickTag = 1;
 
 // ACE Volume
-acex_volume_lowerInVehicles = true;
+force acex_volume_lowerInVehicles = false;	// boats and stompers have open air seats (and ambient music would be affected by this)
 
 // ACE Weapons
 // ace_common_persistentLaserEnabled = false;
