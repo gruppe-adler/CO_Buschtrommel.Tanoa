@@ -17,7 +17,21 @@ fnc_DeactivateJammerOnLoad = {
 ["OPF_T_F", "CSAT_Apex_Pacific"] call GRAD_Loadout_fnc_FactionSetLoadout;
 
 
+// sink uboat function
+buschtrommel_fnc_sinkUboat = {
+    params ["_pos"];
+    {
+        if (typeOf _x in ["Submarine_01_F", "Land_Plank_01_8m_F", "Land_Cargo20_military_green_F", "C_Man_ConstructionWorker_01_Blue_F"]) then {
+            private _altitudeOffset = -6.50;
+            if (_x == uboat_1) then { _altitudeOffset = -12.50 };
+            if (_x == uboat_3) then { container_guy setDamage 1.0; };   // make sure guy on container is killed
 
+            private _uboat_pos = getPosASL _x;
+            _x setPosASL [_uboat_pos#0, _uboat_pos#1, _uboat_pos#2 + _altitudeOffset];     // sink into ground
+            _x setVectorDirAndUp ([[vectorDirVisual _x, vectorUpVisual _x], 0, 10, 10] call BIS_fnc_transformVectorDirAndUp);   // roll and pitch a bit
+        };     
+    } forEach (_pos nearObjects 60);
+};
 // sink uboat into ground when explosives detonate nearby
 ["ace_explosives_place", {
     params ["_explosive", "", "", "_unit"];
@@ -27,20 +41,19 @@ fnc_DeactivateJammerOnLoad = {
 
     _explosive addEventHandler ["Explode", {
         params ["_explosive", "_pos", "_velocity"];
-
-        {
-            if (typeOf _x in ["Submarine_01_F", "Land_Plank_01_8m_F", "Land_Cargo20_military_green_F", "C_Man_ConstructionWorker_01_Blue_F"]) then {
-                private _altitudeOffset = -6.50;
-                if (_x == uboat_1) then { _altitudeOffset = -12.50 };
-                if (_x == uboat_3) then { container_guy setDamage 1.0; };   // make sure guy on container is killed
-
-                private _uboat_pos = getPosASL _x;
-                _x setPosASL [_uboat_pos#0, _uboat_pos#1, _uboat_pos#2 + _altitudeOffset];     // sink into ground
-                _x setVectorDirAndUp ([[vectorDirVisual _x, vectorUpVisual _x], 0, 10, 10] call BIS_fnc_transformVectorDirAndUp);   // roll and pitch a bit
-            };     
-        } forEach (_pos nearObjects 60);
+        [_pos] call buschtrommel_fnc_sinkUboat;
     }];
 }] call CBA_fnc_addEventHandler;
+// sink uboat into ground when projectiles explode nearby
+addMissionEventHandler ["ProjectileCreated", {
+    params ["_projectile"];
+    _projectile addEventHandler ["Explode", {
+        params ["_projectile", "_pos", "_velocity"];
+        private _indirectHitRange =  getNumber (configFile >> "CfgAmmo" >> typeOf _projectile >> "indirectHitRange");
+        if (_indirectHitRange < 10) exitWith { diag_log "ignoring weak projectile" };
+        [_pos] call buschtrommel_fnc_sinkUboat;
+    }];
+}];
 
 
 // disable thermal optics of drones because those don't support the FilmGrain effect of the jammers
