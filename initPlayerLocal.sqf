@@ -1,6 +1,8 @@
 params ["_player", "_didJIP"];
 enableSaving [false, false];
 
+enableSentences false;  // disable radio transmissions to be heard and seen on screen 
+
 
 // allow U menu for easier team management
 ["InitializePlayer", [player, true]] call BIS_fnc_dynamicGroups;
