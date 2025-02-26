@@ -13,7 +13,6 @@ fnc_DeactivateJammerOnLoad = {
 
 
 // apply grad-loadout
-["BLU_T_F", "NATO_Apex_Pacific"] call GRAD_Loadout_fnc_FactionSetLoadout;
 ["OPF_T_F", "CSAT_Apex_Pacific"] call GRAD_Loadout_fnc_FactionSetLoadout;
 
 
@@ -31,7 +30,7 @@ buschtrommel_fnc_sinkUboat = {
             _x setVectorDirAndUp ([[vectorDirVisual _x, vectorUpVisual _x], 0, 10, 10] call BIS_fnc_transformVectorDirAndUp);   // roll and pitch a bit
         };     
     } forEach (_pos nearObjects 60);
-};
+};  
 // sink uboat into ground when explosives detonate nearby
 ["ace_explosives_place", {
     params ["_explosive", "", "", "_unit"];
