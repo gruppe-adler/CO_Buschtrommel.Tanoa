@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=852;
+		nextID=862;
 	};
 	class Camera
 	{
 		pos[]={11546.847,420.32132,11653.907};
-		dir[]={-0.46444085,-0.59568161,0.65533215};
-		up[]={-0.34443671,0.80322027,0.48600453};
-		aside[]={0.81587958,2.8230716e-08,0.57822275};
+		dir[]={-0.46444023,-0.59568095,0.65533161};
+		up[]={-0.34443593,0.80322117,0.48600388};
+		aside[]={0.81587946,0,0.57822216};
 	};
 };
 binarizationWanted=0;
@@ -2187,7 +2187,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12689.595,8.4169359,15324.202};
+						position[]={12689.595,8.4165087,15324.202};
 						angles[]={0,5.4281311,0};
 					};
 					side="East";
@@ -2196,7 +2196,7 @@ class Mission
 					{
 						skill=0.40000001;
 						init="this setUnitTrait [""UAVHacker"", true];";
-						description="6: Combat Life Saver";
+						description="Combat Life Saver";
 						isPlayable=1;
 						class Inventory
 						{
@@ -2322,7 +2322,7 @@ class Mission
 					};
 					id=5333;
 					type="O_T_Medic_F";
-					atlOffset=60.56443;
+					atlOffset=60.564003;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -10620,7 +10620,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12640.173,7.025713,15332.229};
-						angles[]={0,2.4294388,-0};
+						angles[]={0,2.4294388,0};
 					};
 					side="Empty";
 					class Attributes
@@ -10628,7 +10628,7 @@ class Mission
 					};
 					id=7683;
 					type="PortableHelipadLight_01_red_F";
-					atlOffset=58.657001;
+					atlOffset=58.656971;
 				};
 				class Item15
 				{
@@ -10636,7 +10636,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12651.293,7.0257087,15329.467};
-						angles[]={0,0.99209422,-0};
+						angles[]={0,0.99209422,0};
 					};
 					side="Empty";
 					flags=4;
@@ -10653,7 +10653,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12640.064,7.0257244,15327.045};
-						angles[]={0,0.68231654,-0};
+						angles[]={0,0.68231654,0};
 					};
 					side="Empty";
 					flags=4;
@@ -15002,7 +15002,7 @@ class Mission
 				};
 			};
 			id=7258;
-			atlOffset=0.28797913;
+			atlOffset=9.5360565;
 		};
 		class Item76
 		{
@@ -15019,7 +15019,7 @@ class Mission
 			};
 			id=7260;
 			type="B_GMG_01_A_F";
-			atlOffset=0.28797913;
+			atlOffset=9.5360565;
 		};
 		class Item77
 		{
@@ -15043,7 +15043,7 @@ class Mission
 					};
 					id=7268;
 					type="B_UAV_AI";
-					atlOffset=1.0064087;
+					atlOffset=10.3675;
 				};
 			};
 			class Attributes
@@ -15072,7 +15072,7 @@ class Mission
 				};
 			};
 			id=7261;
-			atlOffset=0.27279663;
+			atlOffset=9.3325806;
 		};
 		class Item78
 		{
@@ -15089,7 +15089,7 @@ class Mission
 			};
 			id=7267;
 			type="B_HMG_01_A_F";
-			atlOffset=0.27279663;
+			atlOffset=9.3325806;
 		};
 		class Item79
 		{
@@ -16350,7 +16350,7 @@ class Mission
 					};
 					id=7700;
 					type="Land_Computer_01_olive_F";
-					atlOffset=5.2349243;
+					atlOffset=5.235199;
 				};
 				class Item5
 				{
@@ -16456,7 +16456,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={11018.521,361.06281,11506.172};
-						angles[]={0,3.1238613,-0};
+						angles[]={0,3.1238613,0};
 					};
 					side="Empty";
 					flags=1;
@@ -17865,7 +17865,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={10045.589,413.74548,11767.166};
-						angles[]={-0,1.6618503,0};
+						angles[]={0,1.6618503,0};
 					};
 					side="West";
 					flags=2;
@@ -17910,7 +17910,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={10054.922,413.77405,11827.863};
-				angles[]={-0,1.6618503,0};
+				angles[]={0,1.6618503,0};
 			};
 			side="West";
 			flags=6;
@@ -18104,7 +18104,7 @@ class Mission
 					};
 					id=7731;
 					type="B_UAV_AI";
-					atlOffset=0.51025391;
+					atlOffset=8.9313049;
 				};
 			};
 			class Attributes

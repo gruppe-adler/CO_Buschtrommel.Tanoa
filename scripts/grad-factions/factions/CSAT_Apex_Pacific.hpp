@@ -40,13 +40,15 @@ class CSAT_Apex_Pacific {
         goggles = "";
         nvgoggles = "";
         radio = "TFAR_fadak";
-        binoculars = "Binocular";
+        // binoculars = "Binocular";
+        binoculars = "Rangefinder";
         map = "ItemMap";
-        gps = "ItemGPS";
+        // gps = "ItemGPS";
+        gps = "O_UavTerminal";
         compass = "ItemCompass";
         watch = "ItemWatch";
         addItemsToUniform[] = {
-            MEDICITEMS_BASE,
+            GRAD_FACTIONS_MEDICITEMS_INF_LIST,
             // LIST_2("ACE_Chemlight_HiWhite"),
             // LIST_2("Chemlight_green"),
             // LIST_1("ACE_Flashlight_MX991"),
@@ -79,7 +81,7 @@ class CSAT_Apex_Pacific {
         // squad leader (hunter-killer)
         class Soldier_SL_F: Soldier_F {
             backpack = "UK3CB_B_O_Assault_camo_Radio";
-            binoculars = "Rangefinder";
+            // binoculars = "Rangefinder";
             addItemsToBackpack[] = {
                 LIST_3("30Rnd_580x42_Mag_Tracer_F")
             };
@@ -88,14 +90,7 @@ class CSAT_Apex_Pacific {
         // medic
         class Medic_F: Soldier_F {
             backpack = "B_FieldPack_ghex_OTMedic_F";
-            addItemsToBackpack[] = {
-                LIST_30("ACE_fieldDressing"),
-                LIST_10("ACE_morphine"),
-                LIST_10("ACE_epinephrine"),
-                LIST_5("ACE_bloodIV"), // 1 liter
-                // LIST_5("ACE_bloodIV_500"),
-                LIST_5("ACE_personalAidKit")
-            };
+            GRAD_FACTIONS_MEDICITEMS_SQ
         };
         
         // Grenadier
@@ -120,7 +115,7 @@ class CSAT_Apex_Pacific {
             backpack = "B_FieldPack_ghex_F";
             addItemsToBackpack[] = {
                 LIST_1("ToolKit"),
-                LIST_1("ACE_EntrenchingTool"),
+                // LIST_1("ACE_EntrenchingTool"),
                 LIST_1("ACE_wirecutter")
                 // LIST_1("muzzle_antenna_01_f")   // military antenna (for TFAR emission detection)
             };
@@ -157,7 +152,7 @@ class CSAT_Apex_Pacific {
                 LIST_5("30Rnd_580x42_Mag_F"),
                 LIST_1("ACE_artilleryTable"),
                 LIST_1("ACE_PlottingBoard"),
-                LIST_1("ACE_EntrenchingTool"),
+                // LIST_1("ACE_EntrenchingTool"),
                 LIST_1("ACE_Fortify")                
             };
         };       
@@ -170,7 +165,7 @@ class CSAT_Apex_Pacific {
         // sensor operator (UAV and directionfinder)
         class Soldier_UAV_F: Support_Mort_F {
             headgear = "H_MilCap_ghex_F";
-            gps = "O_UavTerminal";
+            // gps = "O_UavTerminal";
             vest = "V_HarnessO_ghex_F";
             addItemsToVest[] = {
                 LIST_5("30Rnd_580x42_Mag_F"),

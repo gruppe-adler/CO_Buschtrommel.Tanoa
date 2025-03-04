@@ -1,4 +1,4 @@
-#define MEDICITEMS_BASE \
+#define MEDICITEMS_BASE_TvT \
 LIST_10("ACE_fieldDressing"), \
 LIST_3("ACE_morphine"), \
 LIST_4("ACE_tourniquet"), \
