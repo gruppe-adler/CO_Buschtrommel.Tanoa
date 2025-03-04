@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.2617994;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=1034;
 	class ItemIDProvider
 	{
-		nextID=7740;
+		nextID=7741;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11546.847,420.32132,11653.907};
-		dir[]={-0.46444023,-0.59568095,0.65533161};
-		up[]={-0.34443593,0.80322117,0.48600388};
-		aside[]={0.81587946,0,0.57822216};
+		pos[]={12626.907,86.880135,15245.211};
+		dir[]={0.35306326,-0.12868805,-0.92673242};
+		up[]={0.045820788,0.99167651,-0.12027293};
+		aside[]={-0.93449861,1.1944212e-07,-0.35602233};
 	};
 };
 binarizationWanted=0;
@@ -972,7 +972,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=107;
+		items=108;
 		class Item0
 		{
 			dataType="Group";
@@ -996,7 +996,7 @@ class Mission
 					};
 					id=5191;
 					type="B_UAV_AI";
-					atlOffset=37.887772;
+					atlOffset=64.669998;
 				};
 			};
 			class Attributes
@@ -10051,16 +10051,17 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12537.645,14.831398,15306.589};
-						angles[]={6.2826972,3.2023196,6.2571087};
+						angles[]={6.2826962,3.2023127,6.2571101};
 					};
 					side="West";
-					flags=2;
+					flags=6;
 					class Attributes
 					{
+						name="ship_gunG";
 					};
 					id=5570;
 					type="B_UAV_AI";
-					atlOffset=67.465698;
+					atlOffset=0.054938316;
 				};
 			};
 			class Attributes
@@ -10089,7 +10090,7 @@ class Mission
 				};
 			};
 			id=5568;
-			atlOffset=0.055166245;
+			atlOffset=0.054938316;
 		};
 		class Item32
 		{
@@ -10201,7 +10202,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Destroyer";
-			state=1;
 			class Entities
 			{
 				items=18;
@@ -10217,6 +10217,7 @@ class Mission
 					flags=2;
 					class Attributes
 					{
+						ammo=0;
 						init="[this] joinSilent (createGroup east);" \n "(group this) setGroupIdGlobal [""Cruise Missile launcher""];" \n "this setCombatMode ""BLUE"";";
 						name="opfor_vls";
 						receiveRemoteTargets=1;
@@ -10328,19 +10329,21 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={12551.13,14.473473,15330.965};
-						angles[]={6.2826972,3.2023196,6.2571087};
+						position[]={12551.131,14.473221,15330.966};
+						angles[]={6.2826962,3.2023127,6.2571101};
 					};
 					side="West";
 					flags=6;
 					class Attributes
 					{
+						ammo=0;
 						init="[this] joinSilent (createGroup east);" \n "(group this) setGroupIdGlobal [""Ship cannon""];" \n "this setCombatMode ""BLUE"";";
+						name="ship_gun";
 						receiveRemoteTargets=1;
 					};
 					id=5569;
 					type="B_Ship_Gun_01_F";
-					atlOffset=0.055166245;
+					atlOffset=0.054938316;
 				};
 				class Item3
 				{
@@ -18134,6 +18137,24 @@ class Mission
 			};
 			id=7729;
 			atlOffset=0.51025391;
+		};
+		class Item107
+		{
+			dataType="Trigger";
+			position[]={13717.332,90.366074,11039.031};
+			class Attributes
+			{
+				text="players_in_jungle_204";
+				onActivation="ship_gun setVehicleAmmo 1;";
+				sizeA=176.629;
+				sizeB=579.67902;
+				activationBy="ANYPLAYER";
+				triggerInterval=5;
+				effectMusic="AmbientTrack04_F";
+			};
+			id=7740;
+			type="EmptyDetectorAreaR50";
+			atlOffset=-82.707001;
 		};
 	};
 	class Connections
