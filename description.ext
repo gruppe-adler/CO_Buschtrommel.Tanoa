@@ -27,10 +27,10 @@ class Loadouts {
     randomizationMode = 1;  // 0/1/2/3 - Sets randomization mode (if supported by loadout). 0 to disable, 1 to enable, 2 to enable for players only, 3 to enable for AI only.
 
 	// gear customization by players themselves
-	customGear = -1;        // -1 means to keep this disabled for now
+	// customGear = -1;        // -1 means to keep this disabled for now
 	// customGear = 300;       // time in seconds that players can access the customGear interface after last loadout application
-    // customGear = "(_this select 0) distance2D (getMarkerPos 'respawn_west') < 100";   // players can access the customGear interface while closer than 100 to the BLUFOR respawn marker
-    // customGearAllowedCategories[] = {"uniform","vest"};  // sets allowed categories that can be customized
+    customGear = "(_this select 0) distance2D (getMarkerPos 'start_marker') < 100";   // players can access the customGear interface while closer than 100 to the BLUFOR respawn marker
+    customGearAllowedCategories[] = { "uniform", "vest", "headgear", "primaryWeaponPointer" };  // sets allowed categories that can be customized
 
 	class Faction {
         #include "scripts\grad-factions\loadouts.hpp"	// add loadout definition for the 2 factions

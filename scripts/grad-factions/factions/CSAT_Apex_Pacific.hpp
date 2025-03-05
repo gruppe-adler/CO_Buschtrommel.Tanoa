@@ -1,7 +1,12 @@
 class CSAT_Apex_Pacific {
     class AllUnits {
         uniform[] = {
-            "U_O_T_Soldier_F"
+            "U_O_T_Soldier_F",
+            "UK3CB_CSAT_G_O_U_Tanktop",
+            "UK3CB_CSAT_G_O_U_CombatUniform",
+            "UK3CB_CSAT_G_O_U_CombatUniform_02",
+            "UK3CB_CSAT_G_O_U_CombatUniform_Shortsleeve",
+            "UK3CB_CSAT_G_O_U_CombatUniform_Shortsleeve_02"
         };
         vest[] = {
           "V_HarnessO_ghex_F",
@@ -9,15 +14,26 @@ class CSAT_Apex_Pacific {
         };
         // backpack = "";
         headgear[] = {
-            "H_HelmetO_ghex_F",
-            "H_HelmetSpecO_ghex_F",
-            "H_HelmetLeaderO_ghex_F"
+            // "H_HelmetO_ghex_F",
+            // "H_HelmetSpecO_ghex_F",
+            // "H_HelmetLeaderO_ghex_F",
+            "UK3CB_CSAT_G_O_H_Cap",
+            "UK3CB_CSAT_G_O_H_Cap_Radio",
+            "UK3CB_CSAT_G_O_H_BoonieHat",
+            "UK3CB_CSAT_G_O_H_BoonieHat_hs",
+            "UK3CB_CSAT_G_O_H_Bandanna",
+            "UK3CB_CSAT_G_O_H_Bandanna_HS",
+            "UK3CB_CSAT_G_O_H_Patrolcap_Mic"
         };
         primaryWeapon = "";
         primaryWeaponMagazine = "";
         primaryWeaponOptics = "";
         primaryWeaponMuzzle = "";
-        primaryWeaponPointer = "";
+        primaryWeaponPointer[] = {
+            "acc_flashlight",
+            "rhsusf_acc_M952V",
+            "rhsusf_acc_wmx_bk"
+        };
         primaryWeaponUnderbarrel = "";
         primaryWeaponUnderbarrelMagazine = "";
         secondaryWeapon = "";
