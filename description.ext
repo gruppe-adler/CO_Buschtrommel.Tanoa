@@ -30,7 +30,7 @@ class Loadouts {
 	// customGear = -1;        // -1 means to keep this disabled for now
 	// customGear = 300;       // time in seconds that players can access the customGear interface after last loadout application
     customGear = "(_this select 0) distance2D (getMarkerPos 'start_marker') < 100";   // players can access the customGear interface while closer than 100 to the BLUFOR respawn marker
-    customGearAllowedCategories[] = { "uniform", "vest", "headgear", "primaryWeaponPointer" };  // sets allowed categories that can be customized
+    customGearAllowedCategories[] = { "uniform", "vest", "backpack", "headgear", "primaryWeaponPointer", "primaryWeaponOptics" };  // sets allowed categories that can be customized
 
 	class Faction {
         #include "scripts\grad-factions\loadouts.hpp"	// add loadout definition for the 2 factions
