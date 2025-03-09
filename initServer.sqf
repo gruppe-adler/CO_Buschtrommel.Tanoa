@@ -20,3 +20,7 @@
         [_playerHint] remoteExec ["hintC", 0];
     }; 
 }] call CBA_fnc_addEventHandler;
+
+
+// remove NVGs from AI
+{ _x unlinkItem hmd _x; } forEach units blufor;
