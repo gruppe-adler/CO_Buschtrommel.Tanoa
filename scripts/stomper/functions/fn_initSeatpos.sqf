@@ -63,4 +63,4 @@ diw_stomper_sitPosition = [
         ] call ace_interact_menu_fnc_createAction;
         [_type, 0, _menuType, _sitAction] call ace_interact_menu_fnc_addActionToClass;
     } forEach diw_stomper_sitPosition;
-} forEach ["B_UGV_01_F", "O_UGV_01_F", "I_UGV_01_F", "B_T_UGV_01_olive_F", "O_T_UGV_01_ghex_F"];
+} forEach ["B_UGV_01_F", "B_UGV_01_rcws_F", "O_UGV_01_F", "O_UGV_01_rcws_F", "I_UGV_01_F", "B_T_UGV_01_olive_F", "B_T_UGV_01_rcws_olive_F", "O_T_UGV_01_ghex_F", "O_T_UGV_01_rcws_ghex_F"];
