@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=952;
+		nextID=962;
 	};
 	class Camera
 	{
 		pos[]={11092.552,364.68289,11583.961};
-		dir[]={0.89965004,-0.258091,0.35228837};
-		up[]={0.24032736,0.96612293,0.094109237};
-		aside[]={0.36464158,-6.2450999e-07,-0.9312014};
+		dir[]={0.89961022,-0.25807947,0.35227323};
+		up[]={0.24031179,0.96612364,0.094102323};
+		aside[]={0.36462536,0,-0.93115425};
 	};
 };
 binarizationWanted=0;
@@ -172,6 +172,7 @@ addons[]=
 	"A3_Weapons_F_Exp_Rifles_CTARS",
 	"A3_Weapons_F_Acc",
 	"ace_scopes",
+	"ace_ffaa_comp_ace",
 	"ace_explosives",
 	"A3_Weapons_F_Explosives",
 	"ace_arsenal",
@@ -186,7 +187,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=87;
+		items=88;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -725,46 +726,52 @@ class AddonsMetaData
 		};
 		class Item80
 		{
+			className="ace_ffaa_comp_ace";
+			name="COMPONENT_NAME";
+			author="FFAA Mod Team";
+		};
+		class Item81
+		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item81
+		class Item82
 		{
 			className="ace_arsenal";
 			name="ACE3 - Arsenal";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item82
+		class Item83
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item83
+		class Item84
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item84
+		class Item85
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item85
+		class Item86
 		{
 			className="crowsEW_spectrum";
 			name="spectrum";
 			author="Crowdedlight";
 		};
-		class Item86
+		class Item87
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
@@ -971,7 +978,8 @@ class Mission
 		forecastWeather=0;
 		forecastWind=0.1;
 		forecastWaves=0.1;
-		forecastLightnings=0.1;
+		rainForced=1;
+		lightningsForced=1;
 		wavesForced=1;
 		windForced=1;
 		year=2035;
@@ -10201,7 +10209,7 @@ class Mission
 						};
 					};
 					id=5219;
-					atlOffset=1.5258789e-05;
+					atlOffset=60.779999;
 				};
 				class Item1
 				{
@@ -10428,11 +10436,11 @@ class Mission
 						};
 					};
 					id=5225;
-					atlOffset=-0.0019989014;
+					atlOffset=60.779999;
 				};
 			};
 			id=5713;
-			atlOffset=0.092330933;
+			atlOffset=66.007111;
 		};
 		class Item31
 		{
@@ -15291,10 +15299,11 @@ class Mission
 		{
 			dataType="Trigger";
 			position[]={13588.918,2.55,12222.267};
-			angle=5.2521825;
+			angle=5.2521834;
 			class Attributes
 			{
 				text="players_in_port";
+				onActivation="[(50*60), 0.9] remoteExec [""setOvercast"", 2]; ";
 				sizeA=418.61301;
 				sizeB=583.76099;
 				activationBy="ANYPLAYER";
@@ -16233,7 +16242,7 @@ class Mission
 					};
 					id=7860;
 					type="Land_PierWooden_01_ladder_F";
-					atlOffset=-0.97766113;
+					atlOffset=-0.97763062;
 				};
 				class Item30
 				{
@@ -16380,7 +16389,7 @@ class Mission
 				};
 			};
 			id=7380;
-			atlOffset=30.777252;
+			atlOffset=51.296875;
 		};
 		class Item78
 		{
@@ -17488,7 +17497,7 @@ class Mission
 			class Attributes
 			{
 				text="players_in_jungle_204";
-				onActivation="ship_gun setVehicleAmmo 1;";
+				onActivation="ship_gun setVehicleAmmo 1;" \n "0 spawn {" \n "    sleep 120;" \n "    [200, 1] remoteExec [""setRain"", 2]; " \n "    [200, 1] remoteExec [""setLightnings"", 2]; " \n "};";
 				sizeA=176.629;
 				sizeB=579.67902;
 				activationBy="ANYPLAYER";
