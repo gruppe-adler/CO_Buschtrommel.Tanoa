@@ -105,7 +105,7 @@ class CSAT_Apex_Pacific {
             GRAD_FACTIONS_MEDICITEMS_SQ
         };
         
-        // Grenadier
+        // grenadier
         class Soldier_GL_F: Soldier_F {
             primaryWeapon = "arifle_CTAR_GL_ghex_F";   // with underbarrel grenade launcher
             primaryWeaponUnderbarrelMagazine = "1Rnd_HE_Grenade_shell";
@@ -115,11 +115,24 @@ class CSAT_Apex_Pacific {
             };
         };
         
-        // engineer (incl. electronic warfare)
+        // engineer
         class Engineer_F: Soldier_F {
             addItemsToBackpack[] = {
                 LIST_1("ToolKit"),
-                LIST_1("ACE_wirecutter")
+                LIST_1("ACE_wirecutter"),
+                LIST_3("DemoCharge_Remote_Mag")
+            };
+        };
+        
+        // explosive specialist
+        class Soldier_Exp_F: Soldier_F {
+            backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
+            addItemsToBackpack[] = {
+                LIST_1("ACE_DefusalKit"),
+                LIST_1("ACE_VMM3"),
+                LIST_3("APERSMine_Range_Mag"),
+                LIST_3("APERSBoundingMine_Range_Mag"),
+                LIST_3("DemoCharge_Remote_Mag")
             };
         };
         
