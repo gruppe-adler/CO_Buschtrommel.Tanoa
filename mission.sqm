@@ -16,7 +16,7 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1072;
+		nextID=1085;
 	};
 	class Camera
 	{
@@ -185,7 +185,6 @@ addons[]=
 	"A3_Weapons_F_Exp_Rifles_CTARS",
 	"A3_Weapons_F_Acc",
 	"ace_scopes",
-	"ace_ffaa_comp_ace",
 	"ace_explosives",
 	"A3_Weapons_F_Explosives",
 	"ace_arsenal",
@@ -200,7 +199,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=96;
+		items=95;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -790,52 +789,46 @@ class AddonsMetaData
 		};
 		class Item88
 		{
-			className="ace_ffaa_comp_ace";
-			name="COMPONENT_NAME";
-			author="FFAA Mod Team";
-		};
-		class Item89
-		{
 			className="ace_explosives";
 			name="ACE3 - Explosives";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item90
+		class Item89
 		{
 			className="ace_arsenal";
 			name="ACE3 - Arsenal";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item91
+		class Item90
 		{
 			className="A3_Weapons_F_Orange";
 			name="Arma 3 Orange - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item92
+		class Item91
 		{
 			className="A3_Drones_F";
 			name="Arma 3 Beta - Drones";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item93
+		class Item92
 		{
 			className="A3_Weapons_F_Enoch";
 			name="Arma 3 Contact Platform - Weapons and Accessories";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item94
+		class Item93
 		{
 			className="crowsEW_spectrum";
 			name="spectrum";
 			author="Crowdedlight";
 		};
-		class Item95
+		class Item94
 		{
 			className="ace_optics";
 			name="ACE3 - Optics";
@@ -3419,7 +3412,7 @@ class Mission
 					};
 					id=7425;
 					type="Land_GasTank_01_yellow_F";
-					atlOffset=0.54314089;
+					atlOffset=0.54358912;
 				};
 				class Item35
 				{
@@ -3436,7 +3429,7 @@ class Mission
 					};
 					id=7419;
 					type="Land_WeldingTrolley_01_F";
-					atlOffset=0.6633563;
+					atlOffset=0.66431952;
 				};
 				class Item36
 				{
@@ -3858,7 +3851,6 @@ class Mission
 					};
 					id=7547;
 					type="Land_Camping_Light_F";
-					atlOffset=0.00041389465;
 				};
 				class Item56
 				{
@@ -4102,7 +4094,7 @@ class Mission
 				};
 			};
 			id=5492;
-			atlOffset=1.5284636;
+			atlOffset=1.5284572;
 		};
 		class Item7
 		{
@@ -8428,7 +8420,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={13189.09,13.72636,12382.896};
-						angles[]={0,5.7535582,-0};
+						angles[]={0,5.7535582,0};
 					};
 					side="Empty";
 					flags=4;
@@ -10101,7 +10093,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12687.845,15.086117,15338.419};
-						angles[]={-0,4.7215981,-0};
+						angles[]={0,4.7215981,0};
 					};
 					side="Empty";
 					flags=4;
@@ -10136,7 +10128,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12687.854,14.058464,15339.151};
-						angles[]={0,3.1785789,-0};
+						angles[]={0,3.1785789,0};
 					};
 					side="Empty";
 					flags=1;
@@ -10171,7 +10163,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12687.797,14.05846,15337.7};
-						angles[]={0,3.1883371,-0};
+						angles[]={0,3.1883371,0};
 					};
 					side="Empty";
 					flags=1;
@@ -10323,7 +10315,7 @@ class Mission
 					};
 					id=8240;
 					type="HeliHEmpty";
-					atlOffset=5.7220459e-06;
+					atlOffset=4.7683716e-06;
 				};
 				class Item42
 				{
@@ -10641,7 +10633,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12685.679,15.127196,15334.977};
-						angles[]={-0,3.1469879,-0};
+						angles[]={0,3.1469879,0};
 					};
 					side="East";
 					flags=6;
@@ -10803,7 +10795,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12680.711,15.679226,15329.054};
-						angles[]={-0,3.1734405,0};
+						angles[]={0,3.1734405,0};
 					};
 					side="East";
 					flags=2;
@@ -21664,7 +21656,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12691.451,8.4245825,15333.823};
-						angles[]={-0,3.1469879,-0};
+						angles[]={0,3.1469879,0};
 					};
 					side="East";
 					flags=2;
@@ -21716,7 +21708,7 @@ class Mission
 					class PositionInfo
 					{
 						position[]={12692.819,8.4196024,15332.736};
-						angles[]={-0,3.1734405,0};
+						angles[]={0,3.1734405,0};
 					};
 					side="East";
 					flags=2;
