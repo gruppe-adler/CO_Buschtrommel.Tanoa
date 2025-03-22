@@ -136,17 +136,37 @@ class CSAT_Apex_Pacific {
             };
         };
         
+        // anti air
+        class Soldier_AA_F: Soldier_F {
+            secondaryWeapon = "launch_O_Titan_ghex_F";
+            secondaryWeaponMagazine = "Titan_AA";
+            backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
+            addItemsToBackpack[] = {
+                LIST_3("Titan_AA")
+            };
+        };
+        
+        // anti tank
+        class Soldier_AT_F: Soldier_F {
+            secondaryWeapon = "launch_O_Titan_short_ghex_F";
+            secondaryWeaponMagazine = "Titan_AT";
+            backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
+            addItemsToBackpack[] = {
+                LIST_3("Titan_AT")
+            };
+        };
+        
         // marksman
         class Soldier_M_F: Soldier_F {
             primaryWeapon = "srifle_GM6_ghex_F";
-            primaryWeaponMagazine = "5Rnd_127x108_Mag";
+            primaryWeaponMagazine = "5Rnd_127x108_APDS_Mag";
             primaryWeaponOptics = "optic_LRPS_ghex_F";
             addItemsToVest[] = {
-                LIST_3("5Rnd_127x108_Mag"),
+                LIST_3("5Rnd_127x108_APDS_Mag"),
                 LIST_1("ACE_RangeCard")                
             };
             addItemsToBackpack[] = {
-                LIST_11("5Rnd_127x108_Mag")
+                LIST_11("5Rnd_127x108_APDS_Mag")
             };
         };
         
