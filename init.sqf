@@ -65,3 +65,12 @@ addMissionEventHandler ["ProjectileCreated", {
         // _vehicle removeMagazinesTurret ["Laserbatteries", [0]];   // disable laser designator
     }, true, [], true] call CBA_fnc_addClassEventHandler;
 } forEach ([crowsEW_spectrum_defaultClassForJammingSignal, ","] call BIS_fnc_splitString);
+
+
+// prefill transport drones with some useful stuff
+["UAV_06_base_F", "init",{
+    params ["_vehicle"];
+    clearItemCargoGlobal _vehicle;  // remove first aid kits
+    _vehicle addMagazineCargoGlobal ["30Rnd_580x42_Mag_F", 7];
+    _vehicle addMagazineCargoGlobal ["5Rnd_127x108_APDS_Mag", 4];
+}, true, [], true] call CBA_fnc_addClassEventHandler;
