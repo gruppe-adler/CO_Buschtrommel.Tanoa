@@ -75,23 +75,26 @@ class CSAT_Apex_Pacific {
             LIST_2("SmokeShellGreen")
         };
         addItemsToBackpack[] = {
-            LIST_1("ACE_EntrenchingTool"),
+            // LIST_1("ACE_EntrenchingTool"),
         };
 
     };
 
     class Type {
-        // rifleman (base class for hunter-killer teams)
+        // rifleman (base class for most other classes)
         class Soldier_F {
             primaryWeapon = "arifle_CTAR_ghex_F";
             primaryWeaponMagazine = "30Rnd_580x42_Mag_F";
+            addItemsToUniform[] = {
+                LIST_2("30Rnd_580x42_Mag_F"),
+            };
             addItemsToVest[] = {
-                LIST_7("30Rnd_580x42_Mag_F"),
+                LIST_5("30Rnd_580x42_Mag_F"),
                 LIST_2("HandGrenade")
             };
         };
 
-        // squad leader (hunter-killer)
+        // squad leader
         class Soldier_SL_F: Soldier_F {
             backpack = "UK3CB_B_O_Assault_camo_Radio";
             addItemsToBackpack[] = {
@@ -140,6 +143,14 @@ class CSAT_Apex_Pacific {
         class Soldier_AA_F: Soldier_F {
             secondaryWeapon = "launch_O_Titan_ghex_F";
             secondaryWeaponMagazine = "Titan_AA";
+            binoculars = "";    // not needed, because Titan launcher
+            // backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
+            addItemsToBackpack[] = {
+                LIST_1("Titan_AA")
+            };
+        };
+        // anti air assistant
+        class Soldier_AAA_F: Soldier_F {
             backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
             addItemsToBackpack[] = {
                 LIST_3("Titan_AA")
@@ -150,6 +161,7 @@ class CSAT_Apex_Pacific {
         class Soldier_AT_F: Soldier_F {
             secondaryWeapon = "launch_O_Titan_short_ghex_F";
             secondaryWeaponMagazine = "Titan_AT";
+            binoculars = "";    // not needed, because Titan launcher
             backpack = "UK3CB_CSAT_G_O_B_ASS";    // force large backpack for this role
             addItemsToBackpack[] = {
                 LIST_3("Titan_AT")
@@ -177,9 +189,12 @@ class CSAT_Apex_Pacific {
             primaryWeapon = "arifle_CTARS_ghex_F";
             primaryWeaponMagazine = "100Rnd_580x42_ghex_Mag_F";
             addItemsToVest[] = {
+                LIST_3("100Rnd_580x42_ghex_Mag_F")
+            };
+             addItemsToBackpack[] = {
                 LIST_5("100Rnd_580x42_ghex_Mag_F")
             };
-        };
+       };
         
         // artillery gunner (base class for non-hunter-killer)
         class Support_Mort_F {

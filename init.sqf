@@ -71,6 +71,8 @@ addMissionEventHandler ["ProjectileCreated", {
 ["UAV_06_base_F", "init",{
     params ["_vehicle"];
     clearItemCargoGlobal _vehicle;  // remove first aid kits
-    _vehicle addMagazineCargoGlobal ["30Rnd_580x42_Mag_F", 7];
-    _vehicle addMagazineCargoGlobal ["5Rnd_127x108_APDS_Mag", 4];
+    _vehicle addMagazineCargoGlobal ["30Rnd_580x42_Mag_F", 6];
+    _vehicle addMagazineCargoGlobal ["5Rnd_127x108_APDS_Mag", 3];
+    _vehicle addMagazineCargoGlobal ["100Rnd_580x42_ghex_Mag_F", 1];
+    _vehicle addMagazineCargoGlobal ["1Rnd_HE_Grenade_shell", 1];
 }, true, [], true] call CBA_fnc_addClassEventHandler;
