@@ -76,6 +76,7 @@ class CSAT_Apex_Pacific {
         };
         addItemsToBackpack[] = {
             // LIST_1("ACE_EntrenchingTool"),
+            LIST_1("ACE_UAVBattery")
         };
 
     };
@@ -233,6 +234,9 @@ class CSAT_Apex_Pacific {
             uniform = "UK3CB_CSAT_G_O_U_Officer";
             backpack = "UK3CB_B_O_Assault_camo_Radio";
             headgear = "UK3CB_CSAT_BEL_H_Beret";
+            addItemsToBackpack[] = {
+                LIST_1("ACE_wirecutter")
+            };
         };        
     };
 };
