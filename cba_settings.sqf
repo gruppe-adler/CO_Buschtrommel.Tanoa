@@ -16,7 +16,7 @@ force crowsEW_spectrum_tfarSideTrack = true;	// show friendly radio emissions
 force crowsEW_spectrum_minJamSigStrength = -50;	// (in dBm); minimum signal strength necessary in Spectrum Device for jamming
 force crowsEW_spectrum_defaultClassForJammingSignal = "UGV_01_base_F,UGV_02_Base_F,UAV_01_base_F,UAV_02_base_F,UAV_03_base_F,UAV_04_base_F,UAV_05_Base_F,UAV_06_base_F,B_SAM_System_01_F,B_SAM_System_02_F,B_Ship_MRLS_01_F,B_Ship_Gun_01_F,B_AAA_System_01_F,B_GMG_01_A_F,B_HMG_01_A_F,B_T_Boat_Armed_01_minigun_F,B_W_Static_Designator_01_F,B_SAM_System_03_F";
 force crowsEW_spectrum_defaultRangesForJammingSignal = "2201,2202,2203,10004,10005,10006,10007,2208,3009,3010,3011,3012,3013,2214,2215,3014,2217,3015";
-
+force crowsEW_spectrum_UAVterminalUserVisibleInSpectrum = true;	// attach a signal to players that have a UAVterminal connected to a drone
 
 
 
