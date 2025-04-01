@@ -68,6 +68,7 @@ class CSAT_Apex_Pacific {
         watch = "ItemWatch";
         addItemsToUniform[] = {
             GRAD_FACTIONS_MEDICITEMS_INF_LIST,
+            LIST_2("ACE_CableTie"),
             LIST_1("ACE_MapTools")
           };
         addItemsToVest[] = {

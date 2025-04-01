@@ -8,7 +8,7 @@ class EditorData
 	toggles=521;
 	class ItemIDProvider
 	{
-		nextID=8935;
+		nextID=8936;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={13608.716,16.311161,11869.341};
-		dir[]={-0.1622919,-0.3686884,-0.91528487};
-		up[]={-0.064370036,0.92954969,-0.36303046};
-		aside[]={-0.98464948,-1.4624675e-08,0.17459054};
+		pos[]={13601.236,47.440071,11920.852};
+		dir[]={-0.062415984,-0.29524919,-0.95339102};
+		up[]={-0.019288307,0.95541495,-0.29462153};
+		aside[]={-0.99787372,-5.1628376e-08,0.065328017};
 	};
 };
 binarizationWanted=0;
@@ -44,7 +44,6 @@ addons[]=
 	"A3_Modules_F",
 	"UK3CB_Factions_Vehicles_Hilux",
 	"UK3CB_Factions_Vehicles_Kamaz",
-	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Soft_F_Gamma_Van_01",
 	"A3_Soft_F_Gamma_Hatchback_01",
 	"A3_Soft_F_Enoch_Offroad_01",
@@ -55,14 +54,15 @@ addons[]=
 	"ace_realisticnames",
 	"A3_Ui_F",
 	"A3_Structures_F_Exp_Industrial_Port",
-	"A3_Structures_F_Exp_Walls_Tin",
-	"A3_Characters_F_Orange",
 	"Jbad_mil",
 	"ace_repair",
 	"ace_dragging",
 	"A3_Structures_F_Items_Tools",
 	"A3_Structures_F_Heli_Civ_Constructions",
 	"A3_Structures_F_EPA_Items_Tools",
+	"A3_Characters_F_Orange",
+	"A3_Structures_F_Exp_Walls_Tin",
+	"A3_Soft_F_Exp_Offroad_02",
 	"A3_Boat_F_EPC_Submarine_01",
 	"A3_Aegis_Boat_F_Aegis_Submarine_01",
 	"A3_Props_F_Enoch_Military_Equipment",
@@ -372,48 +372,48 @@ class AddonsMetaData
 		};
 		class Item21
 		{
-			className="A3_Structures_F_Exp";
-			name="Arma 3 Apex - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item22
-		{
-			className="A3_Characters_F_Orange";
-			name="Arma 3 Orange - Characters and Clothing";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item23
-		{
 			className="Jbad_mil";
 			name="Jbad_mil";
 		};
-		class Item24
+		class Item22
 		{
 			className="ace_repair";
 			name="ACE3 - Repair";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item25
+		class Item23
 		{
 			className="ace_dragging";
 			name="ACE3 - Dragging";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item26
+		class Item24
 		{
 			className="A3_Structures_F_Heli";
 			name="Arma 3 Helicopters - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item27
+		class Item25
 		{
 			className="A3_Structures_F_EPA";
 			name="Arma 3 Survive Episode - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item26
+		{
+			className="A3_Characters_F_Orange";
+			name="Arma 3 Orange - Characters and Clothing";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item27
+		{
+			className="A3_Structures_F_Exp";
+			name="Arma 3 Apex - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -961,8 +961,8 @@ dlcs[]=
 	"Expansion",
 	"UK3CB_Factions",
 	"Enoch",
-	"ORANGE",
 	"Heli",
+	"ORANGE",
 	"Contact",
 	"Jets",
 	"Argo",
@@ -990,7 +990,7 @@ class ScenarioData
 };
 class CustomAttributes
 {
-	class Category0
+	class Category1
 	{
 		name="Multiplayer";
 		class Attribute0
@@ -1019,7 +1019,7 @@ class CustomAttributes
 		};
 		nAttributes=1;
 	};
-	class Category1
+	class Category2
 	{
 		name="Scenario";
 		class Attribute0
@@ -2571,7 +2571,7 @@ class Mission
 			name="Port";
 			class Entities
 			{
-				items=26;
+				items=23;
 				class Item0
 				{
 					dataType="Object";
@@ -3019,22 +3019,6 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={13607.464,4.1195736,11835.972};
-						angles[]={-0,3.4906585,0};
-					};
-					side="Empty";
-					flags=4;
-					class Attributes
-					{
-					};
-					id=7585;
-					type="C_Offroad_02_unarmed_F";
-				};
-				class Item10
-				{
-					dataType="Object";
-					class PositionInfo
-					{
 						position[]={13243.325,4.4077773,12573.505};
 						angles[]={0,1.2469246,0};
 					};
@@ -3047,7 +3031,7 @@ class Mission
 					type="C_Van_01_fuel_F";
 					atlOffset=-7.1525574e-07;
 				};
-				class Item11
+				class Item10
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3064,7 +3048,7 @@ class Mission
 					type="C_Hatchback_01_F";
 					atlOffset=-0.0016176701;
 				};
-				class Item12
+				class Item11
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3428,7 +3412,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item13
+				class Item12
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3444,7 +3428,7 @@ class Mission
 					type="UK3CB_C_Pickup";
 					atlOffset=-9.5367432e-07;
 				};
-				class Item14
+				class Item13
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3461,7 +3445,7 @@ class Mission
 					type="UK3CB_C_Ikarus_RED";
 					atlOffset=-7.1525574e-07;
 				};
-				class Item15
+				class Item14
 				{
 					dataType="Object";
 					class PositionInfo
@@ -3553,7 +3537,7 @@ class Mission
 						nAttributes=1;
 					};
 				};
-				class Item16
+				class Item15
 				{
 					dataType="Marker";
 					position[]={13566.094,-8.4808693,12167.284};
@@ -3564,7 +3548,7 @@ class Mission
 					id=7444;
 					atlOffset=6.2122974;
 				};
-				class Item17
+				class Item16
 				{
 					dataType="Trigger";
 					position[]={13511.669,2.5921526,12145.241};
@@ -3582,7 +3566,7 @@ class Mission
 					type="EmptyDetectorAreaR250";
 					atlOffset=10.933009;
 				};
-				class Item18
+				class Item17
 				{
 					dataType="Layer";
 					name="cranes";
@@ -5640,79 +5624,14 @@ class Mission
 					id=8919;
 					atlOffset=0.37325454;
 				};
-				class Item19
-				{
-					dataType="Object";
-					class PositionInfo
-					{
-						position[]={13596.997,3.786,11832.084};
-						angles[]={0,1.9230038,0};
-					};
-					side="Empty";
-					flags=5;
-					class Attributes
-					{
-					};
-					id=8920;
-					type="Land_TinWall_02_l_4m_F";
-					atlOffset=-0.0039999485;
-				};
-				class Item20
-				{
-					dataType="Group";
-					side="Civilian";
-					class Entities
-					{
-						items=1;
-						class Item0
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={13605.802,2.651439,11845.487};
-								angles[]={0,3.8599277,-0};
-							};
-							side="Civilian";
-							flags=7;
-							class Attributes
-							{
-								init="[this, ""REPAIR_VEH_STAND""] call BIS_fnc_ambientAnim;";
-								name="container_guy_1";
-							};
-							id=8922;
-							type="C_Man_ConstructionWorker_01_Blue_F";
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="pitch";
-									expression="_this setpitch _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0.99000001;
-										};
-									};
-								};
-								nAttributes=1;
-							};
-						};
-					};
-					class Attributes
-					{
-					};
-					id=8921;
-				};
-				class Item21
+				class Item18
 				{
 					dataType="Layer";
 					name="Repair shop";
 					state=1;
 					class Entities
 					{
-						items=9;
+						items=13;
 						class Item0
 						{
 							dataType="Logic";
@@ -5823,6 +5742,7 @@ class Mission
 							};
 							id=8925;
 							type="ACE_Wheel";
+							atlOffset=-5.5551529e-05;
 						};
 						class Item5
 						{
@@ -5887,11 +5807,110 @@ class Mission
 							id=8933;
 							type="Land_FireExtinguisher_F";
 						};
+						class Item9
+						{
+							dataType="Group";
+							side="Civilian";
+							class Entities
+							{
+								items=1;
+								class Item0
+								{
+									dataType="Object";
+									class PositionInfo
+									{
+										position[]={13605.802,2.651439,11845.488};
+										angles[]={0,3.8599353,0};
+									};
+									side="Civilian";
+									flags=7;
+									class Attributes
+									{
+										init="[this, ""REPAIR_VEH_STAND""] call BIS_fnc_ambientAnim;";
+										name="stomper_guy";
+									};
+									id=8922;
+									type="C_Man_ConstructionWorker_01_Blue_F";
+									class CustomAttributes
+									{
+										class Attribute0
+										{
+											property="pitch";
+											expression="_this setpitch _value;";
+											class Value
+											{
+												class data
+												{
+													singleType="SCALAR";
+													value=0.99000001;
+												};
+											};
+										};
+										nAttributes=1;
+									};
+								};
+							};
+							class Attributes
+							{
+							};
+							id=8921;
+						};
+						class Item10
+						{
+							dataType="Trigger";
+							position[]={13607.778,2.6044919,11847.956};
+							class Attributes
+							{
+								text="surrender_stomper_guy";
+								onActivation="stomper_guy call BIS_fnc_ambientAnim__terminate;" \n "[""ace_captives_setSurrendered"", [stomper_guy, true], stomper_guy] call CBA_fnc_targetEvent;";
+								sizeA=15;
+								sizeB=15;
+								activationBy="ANYPLAYER";
+								triggerInterval=1;
+							};
+							id=8935;
+							type="EmptyDetectorAreaR50";
+							atlOffset=-2.3841858e-07;
+						};
+						class Item11
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13596.997,3.786,11832.084};
+								angles[]={0,1.9230038,0};
+							};
+							side="Empty";
+							flags=5;
+							class Attributes
+							{
+							};
+							id=8920;
+							type="Land_TinWall_02_l_4m_F";
+							atlOffset=-0.0039999485;
+						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13607.464,4.1195736,11835.972};
+								angles[]={-0,3.4906585,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+							};
+							id=7585;
+							type="C_Offroad_02_unarmed_F";
+							atlOffset=-2.2649765e-05;
+						};
 					};
 					id=8923;
-					atlOffset=0.05211401;
+					atlOffset=0.01766777;
 				};
-				class Item22
+				class Item19
 				{
 					dataType="Layer";
 					name="Uboat 1";
@@ -6061,7 +6080,7 @@ class Mission
 					id=8926;
 					atlOffset=8.0221958;
 				};
-				class Item23
+				class Item20
 				{
 					dataType="Layer";
 					name="Uboat 2";
@@ -6301,7 +6320,7 @@ class Mission
 					id=8927;
 					atlOffset=0.49709392;
 				};
-				class Item24
+				class Item21
 				{
 					dataType="Layer";
 					name="Uboat 3";
@@ -6470,7 +6489,7 @@ class Mission
 							{
 							};
 							id=5685;
-							atlOffset=11.587001;
+							atlOffset=60.779999;
 						};
 						class Item5
 						{
@@ -6701,9 +6720,9 @@ class Mission
 						};
 					};
 					id=8928;
-					atlOffset=8.0213623;
+					atlOffset=-3.5823355;
 				};
-				class Item25
+				class Item22
 				{
 					dataType="Layer";
 					name="Guns";
@@ -6867,7 +6886,7 @@ class Mission
 				};
 			};
 			id=5538;
-			atlOffset=16.191633;
+			atlOffset=3.3406985;
 		};
 		class Item13
 		{
