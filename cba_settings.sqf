@@ -44,6 +44,7 @@ ace_repair_wheelRepairRequiredItems = [];
 
 // ACE Map
 force ace_map_DefaultChannel = 0;	// 0 is global channel
+force ace_map_BFT_Enabled = false;
 ace_markers_timestampEnabled = true;
 ace_markers_timestampFormat = "HH:MM";
 ace_markers_timestampHourFormat = 24;
