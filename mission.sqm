@@ -8,7 +8,7 @@ class EditorData
 	toggles=1025;
 	class ItemIDProvider
 	{
-		nextID=9139;
+		nextID=9145;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={11058.61,412.48618,11435.709};
-		dir[]={0.021893624,-0.64145356,0.7668494};
-		up[]={0.018306103,0.76716191,0.64119232};
-		aside[]={0.99959278,0,-0.028538469};
+		pos[]={11168.719,398.78784,11468.942};
+		dir[]={-0.133692,-0.51322043,0.8477807};
+		up[]={-0.079945177,0.85825664,0.5069561};
+		aside[]={0.9877938,3.9020961e-08,0.15577106};
 	};
 };
 binarizationWanted=0;
@@ -11429,7 +11429,7 @@ class Mission
 			name="Mine";
 			class Entities
 			{
-				items=6;
+				items=7;
 				class Item0
 				{
 					dataType="Group";
@@ -11723,9 +11723,61 @@ class Mission
 					id=5225;
 					atlOffset=-0.0019989014;
 				};
+				class Item6
+				{
+					dataType="Group";
+					side="Civilian";
+					class Entities
+					{
+						items=1;
+						class Item0
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11157.389,350.63303,11540.162};
+								angles[]={0,3.4995422,0};
+							};
+							side="Civilian";
+							flags=2;
+							class Attributes
+							{
+								name="bulldozerD_1";
+							};
+							id=9142;
+							type="C_IDAP_UAV_AI_F";
+							atlOffset=0.25158691;
+						};
+					};
+					class Attributes
+					{
+					};
+					class CrewLinks
+					{
+						class LinkIDProvider
+						{
+							nextID=1;
+						};
+						class Links
+						{
+							items=1;
+							class Item0
+							{
+								linkID=0;
+								item0=9142;
+								item1=9143;
+								class CustomData
+								{
+									role=1;
+								};
+							};
+						};
+					};
+					id=9141;
+				};
 			};
 			id=5713;
-			atlOffset=0.092330933;
+			atlOffset=10.896851;
 		};
 		class Item27
 		{
@@ -22355,7 +22407,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=12;
+						items=14;
 						class Item0
 						{
 							dataType="Object";
@@ -22718,9 +22770,62 @@ class Mission
 							type="MetalBarrel_burning_F";
 							atlOffset=-0.00067138672;
 						};
+						class Item12
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11162.755,351.9325,11537.983};
+								angles[]={-0,0.31577685,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								init="this attachTo [bulldozer_2,[0.0,0.0,-0.5]]; " \n "this setVectorDirAndUp [[0,-4,0],[0,0,1]];";
+							};
+							id=9144;
+							type="Land_Bulldozer_01_abandoned_F";
+						};
+						class Item13
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={11158.5,352.46933,11537.078};
+								angles[]={0,3.4995422,0};
+							};
+							side="Civilian";
+							flags=6;
+							class Attributes
+							{
+								init="call{this setObjectTextureGlobal [0,'']}; " \n "call{this setObjectTextureGlobal [1,'']}; " \n "call{this setObjectTextureGlobal [2,'']}; " \n "this; lodNoShadow = 1;" \n "this limitSpeed 10;";
+								name="bulldozer_2";
+								reportOwnPosition=1;
+							};
+							id=9143;
+							type="C_IDAP_UGV_01_F";
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="hideObject";
+									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
+									class Value
+									{
+										class data
+										{
+											singleType="BOOL";
+											value=0;
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=8796;
-					atlOffset=2.4493103;
+					atlOffset=-1.0342712;
 				};
 				class Item13
 				{
@@ -23656,7 +23761,7 @@ class Mission
 				};
 			};
 			id=7380;
-			atlOffset=10.713989;
+			atlOffset=10.629028;
 		};
 		class Item54
 		{
