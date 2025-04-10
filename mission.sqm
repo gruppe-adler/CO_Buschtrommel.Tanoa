@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=9235;
+		nextID=9239;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1637;
+		nextID=1865;
 	};
 	class Camera
 	{
-		pos[]={11066.216,401.40964,11463.539};
-		dir[]={0.24937324,-0.57936639,0.77601171};
-		up[]={0.17725937,0.81505537,0.5516063};
-		aside[]={0.9520725,-5.276961e-07,-0.30595174};
+		pos[]={6841.605,7.3384628,7292.9399};
+		dir[]={-0.9142552,-0.40451813,-0.022565203};
+		up[]={-0.40439755,0.91452807,-0.0099808117};
+		aside[]={-0.024673494,-2.0274456e-07,0.99969763};
 	};
 };
 binarizationWanted=0;
@@ -167,6 +167,8 @@ addons[]=
 	"ae3_interaction",
 	"ae3_armaos",
 	"A3_Props_F_Decade_Objectives",
+	"A3_Props_F_Orange_Humanitarian_Camps",
+	"A3_Structures_F_Heli_Civ_Accessories",
 	"A3_Structures_F_Exp_Military_Barracks_01",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Exp_Walls_Net",
@@ -809,46 +811,46 @@ class AddonsMetaData
 		};
 		class Item86
 		{
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item87
+		{
 			className="CUP_Misc_e_Config";
 			name="CUP_Misc_e_Config";
 		};
-		class Item87
+		class Item88
 		{
 			className="A3_Structures_F_Enoch_Military";
 			name="Arma 3 Contact Platform - Military Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item88
+		class Item89
 		{
 			className="mts_nature";
 			name="mts - Nature";
 			author="Timi007";
 			url="https://github.com/Metis-Team/mts_nature";
 		};
-		class Item89
+		class Item90
 		{
 			className="Jbad_ConstructionCrane";
 			name="Jbad_ConstructionCrane";
 		};
-		class Item90
+		class Item91
 		{
 			className="A3_Structures_F_Bootcamp";
 			name="Arma 3 Bootcamp Update - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item91
+		class Item92
 		{
 			className="A3_Structures_F_EPC";
 			name="Arma 3 Win Episode - Buildings and Structures";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item92
-		{
-			className="A3_Props_F_Orange";
-			name="Arma 3 Orange - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
@@ -12439,7 +12441,7 @@ class Mission
 							};
 							class Attributes
 							{
-								dynamicSimulation=1;
+								behaviour="CARELESS";
 							};
 							id=7305;
 							atlOffset=60.779999;
@@ -12715,7 +12717,7 @@ class Mission
 							{
 								text="WTF are you going?";
 								condition="{  if (typeOf _x == ""B_T_UGV_01_rcws_olive_F"") exitWith { true } } forEach thislist;";
-								onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "[""<t color='#99ffffff'>Mechanic</t>: WTF... where are you going? o_O"",-1,1,6,1,1] spawn BIS_fnc_dynamicText;" \n "0 spawn { " \n "    sleep 60;" \n "    [hangar, 2, 1] call BIS_fnc_Door;" \n "    [hangar, 3, 1] call BIS_fnc_Door;    " \n "    for ""_i"" from 0 to 10 do { playSound3D [""a3\sounds_f\sfx\alarm.wss"", siren]; sleep 1.7; };" \n "};";
+								onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "[""<t color='#99ffffff'>Mechanic</t>: WTF... where are you going? o_O"",-1,1,6,1,1] spawn BIS_fnc_dynamicText;" \n "";
 								sizeA=4;
 								sizeB=7;
 								activationBy="ANY";
@@ -13017,7 +13019,7 @@ class Mission
 					{
 						text="Start airport scene";
 						condition="{  if (typeOf _x == ""B_T_UGV_01_rcws_olive_F"") exitWith { true } } forEach thislist;";
-						onActivation="blackfish_1 engineOn true;" \n "blackfish_2 engineOn true;" \n "gunship engineOn true;" \n "";
+						onActivation="0 spawn { " \n "    sleep 60;" \n "    [hangar, 2, 1] call BIS_fnc_Door;" \n "    [hangar, 3, 1] call BIS_fnc_Door; " \n "    for ""_i"" from 0 to 10 do { playSound3D [""a3\sounds_f\sfx\alarm.wss"", siren]; sleep 1.7; };" \n "};";
 						sizeA=31.586;
 						sizeB=22.082001;
 						activationBy="ANY";
@@ -15459,11 +15461,10 @@ class Mission
 					};
 					id=8965;
 					type="B_UAV_02_dynamicLoadout_F";
-					atlOffset=2.3841858e-07;
 				};
 			};
 			id=7186;
-			atlOffset=6.05375;
+			atlOffset=6.0538149;
 		};
 		class Item36
 		{
@@ -16525,7 +16526,7 @@ class Mission
 					};
 					id=8101;
 					type="B_UAV_AI";
-					atlOffset=1.4203186;
+					atlOffset=10.668365;
 				};
 				class Item1
 				{
@@ -16542,7 +16543,7 @@ class Mission
 					};
 					id=8111;
 					type="B_UAV_AI";
-					atlOffset=1.4203186;
+					atlOffset=10.668365;
 				};
 			};
 			class Attributes
@@ -16571,7 +16572,7 @@ class Mission
 				};
 			};
 			id=7258;
-			atlOffset=0.19963074;
+			atlOffset=9.1497116;
 		};
 		class Item47
 		{
@@ -16595,7 +16596,7 @@ class Mission
 					};
 					id=7268;
 					type="B_UAV_AI";
-					atlOffset=1.0064087;
+					atlOffset=10.3675;
 				};
 			};
 			class Attributes
@@ -16624,7 +16625,7 @@ class Mission
 				};
 			};
 			id=7261;
-			atlOffset=0.27279663;
+			atlOffset=9.3325806;
 		};
 		class Item48
 		{
@@ -16816,7 +16817,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Funkturm 204";
-			state=1;
 			class Entities
 			{
 				items=17;
@@ -16892,7 +16892,7 @@ class Mission
 					};
 					id=7267;
 					type="B_HMG_01_A_F";
-					atlOffset=0.27279663;
+					atlOffset=9.3325806;
 				};
 				class Item4
 				{
@@ -16903,13 +16903,13 @@ class Mission
 						angles[]={0,5.7527447,0};
 					};
 					side="West";
-					flags=6;
+					flags=2;
 					class Attributes
 					{
 					};
 					id=8110;
 					type="B_HMG_01_A_F";
-					atlOffset=0.19963074;
+					atlOffset=9.1497116;
 				};
 				class Item5
 				{
@@ -17168,7 +17168,6 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=8690;
-					atlOffset=60.779999;
 				};
 				class Item7
 				{
@@ -19673,7 +19672,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=22;
+						items=23;
 						class Item0
 						{
 							dataType="Object";
@@ -19855,8 +19854,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13765.978,202.30368,10949.826};
-								angles[]={0,5.6933861,0};
+								position[]={13766.081,202.30368,10949.945};
+								angles[]={0,5.4261489,0};
 							};
 							side="Empty";
 							flags=5;
@@ -19903,67 +19902,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13767.681,201.20164,10952.205};
-								angles[]={0,4.8223796,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								dynamicSimulation=1;
-							};
-							id=7557;
-							type="RuggedTerminal_01_communications_F";
-							atlOffset=0.82699585;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="OpenTerminal";
-									expression="[_this,['Terminal_source','Terminal_source_sound'],_value*100,true] call bis_fnc_LinkTerminal_Animations";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item11
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={13767.293,201.0267,10946.233};
 								angles[]={0,5.1483893,0};
 							};
@@ -19976,7 +19914,7 @@ class Mission
 							id=7564;
 							type="Land_PortableServer_01_olive_F";
 						};
-						class Item12
+						class Item11
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19994,7 +19932,7 @@ class Mission
 							type="Land_PortableServer_01_black_F";
 							atlOffset=0.015060425;
 						};
-						class Item13
+						class Item12
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20011,13 +19949,13 @@ class Mission
 							type="Land_IPPhone_01_olive_F";
 							atlOffset=0.88520813;
 						};
-						class Item14
+						class Item13
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13765.632,201.25502,10949.559};
-								angles[]={0,1.5133255,0};
+								position[]={13765.817,201.25502,10949.597};
+								angles[]={0,1.2460853,0};
 							};
 							side="Empty";
 							class Attributes
@@ -20028,7 +19966,7 @@ class Mission
 							type="Land_laptop_03_closed_olive_F";
 							atlOffset=0.71656799;
 						};
-						class Item15
+						class Item14
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20045,7 +19983,7 @@ class Mission
 							type="land_gm_euro_furniture_bed_02";
 							atlOffset=2.0480042;
 						};
-						class Item16
+						class Item15
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20062,7 +20000,7 @@ class Mission
 							type="Land_Camping_Light_off_F";
 							atlOffset=0.00042724609;
 						};
-						class Item17
+						class Item16
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20078,7 +20016,7 @@ class Mission
 							type="Land_Camping_Light_off_F";
 							atlOffset=0.81278992;
 						};
-						class Item18
+						class Item17
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20096,7 +20034,7 @@ class Mission
 							type="Land_CampingTable_small_F";
 							atlOffset=0.0002746582;
 						};
-						class Item19
+						class Item18
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20113,7 +20051,7 @@ class Mission
 							id=7577;
 							type="Land_PortableCabinet_01_4drawers_black_F";
 						};
-						class Item20
+						class Item19
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20131,7 +20069,7 @@ class Mission
 							type="Land_PortableWeatherStation_01_olive_F";
 							atlOffset=0.02557373;
 						};
-						class Item21
+						class Item20
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20148,13 +20086,49 @@ class Mission
 							type="Land_PortableGenerator_01_black_F";
 							atlOffset=3.6803131;
 						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13767.535,200.87798,10952.99};
+								angles[]={0,5.1561041,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=9236;
+							type="Land_AirConditioner_03_F";
+							atlOffset=0.00022888184;
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13769.182,201.02023,10952.049};
+								angles[]={0,0.43299872,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=9238;
+							type="Land_AirconCondenser_01_F";
+							atlOffset=0.86001587;
+						};
 					};
 					id=9084;
-					atlOffset=0.73446655;
+					atlOffset=0.29644775;
 				};
 			};
 			id=7333;
-			atlOffset=52.694595;
+			atlOffset=49.472168;
 		};
 		class Item52
 		{
@@ -23703,7 +23677,7 @@ class Mission
 							};
 							id=7700;
 							type="Land_Computer_01_olive_F";
-							atlOffset=5.235199;
+							atlOffset=5.1824951;
 						};
 						class Item3
 						{
@@ -24023,7 +23997,7 @@ class Mission
 						};
 					};
 					id=8890;
-					atlOffset=0.84683228;
+					atlOffset=0.84851074;
 				};
 				class Item16
 				{
@@ -28227,13 +28201,12 @@ class Mission
 								position[]={13186.022,14.161211,14027.688};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=7547;
 							type="Land_Camping_Light_F";
-							atlOffset=0.00041389465;
+							atlOffset=0.65616322;
 						};
 						class Item56
 						{
@@ -28738,7 +28711,6 @@ class Mission
 				};
 			};
 			id=8964;
-			atlOffset=2.3841858e-07;
 		};
 		class Item79
 		{
