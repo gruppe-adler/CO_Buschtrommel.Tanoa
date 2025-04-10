@@ -5,10 +5,10 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=1;
+	toggles=10;
 	class ItemIDProvider
 	{
-		nextID=9235;
+		nextID=9241;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1637;
+		nextID=1922;
 	};
 	class Camera
 	{
-		pos[]={11066.216,401.40964,11463.539};
-		dir[]={0.24937324,-0.57936639,0.77601171};
-		up[]={0.17725937,0.81505537,0.5516063};
-		aside[]={0.9520725,-5.276961e-07,-0.30595174};
+		pos[]={13761.854,202.44237,10946.056};
+		dir[]={0.85869282,-0.28679875,-0.42472717};
+		up[]={0.25707138,0.95799083,-0.1271528};
+		aside[]={-0.44335198,0,-0.89634758};
 	};
 };
 binarizationWanted=0;
@@ -165,8 +165,9 @@ addons[]=
 	"UK3CB_Factions_ADC_C",
 	"A3_Props_F_Exp_Military_Camps",
 	"ae3_interaction",
-	"ae3_armaos",
 	"A3_Props_F_Decade_Objectives",
+	"A3_Props_F_Orange_Humanitarian_Camps",
+	"A3_Structures_F_Heli_Civ_Accessories",
 	"A3_Structures_F_Exp_Military_Barracks_01",
 	"A3_Structures_F_Walls",
 	"A3_Structures_F_Exp_Walls_Net",
@@ -224,7 +225,7 @@ class AddonsMetaData
 {
 	class List
 	{
-		items=110;
+		items=109;
 		class Item0
 		{
 			className="A3_Characters_F";
@@ -798,14 +799,15 @@ class AddonsMetaData
 		};
 		class Item84
 		{
-			className="ae3_armaos";
-			name="armaos";
-			author="y0014984|Wasserstoff";
+			className="A3_Props_F_Decade_Objectives";
+			name="A3_Props_F_Decade_Objectives";
 		};
 		class Item85
 		{
-			className="A3_Props_F_Decade_Objectives";
-			name="A3_Props_F_Decade_Objectives";
+			className="A3_Props_F_Orange";
+			name="Arma 3 Orange - Decorative and Mission Objects";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
 		};
 		class Item86
 		{
@@ -847,112 +849,105 @@ class AddonsMetaData
 		};
 		class Item92
 		{
-			className="A3_Props_F_Orange";
-			name="Arma 3 Orange - Decorative and Mission Objects";
-			author="Bohemia Interactive";
-			url="https://www.arma3.com";
-		};
-		class Item93
-		{
 			className="ace_field_rations";
 			name="ACE3 - Field Rations";
 			author="ACE-Team";
 			url="https://ace3.acemod.org/";
 		};
-		class Item94
+		class Item93
 		{
 			className="UK3CB_Factions_CHD";
 			name="3CB Factions - CHD";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item95
+		class Item94
 		{
 			className="UK3CB_Factions_Vehicles_Forklift";
 			name="UK3CB_Factions_Vehicles_Forklift";
 		};
-		class Item96
+		class Item95
 		{
 			className="rhs_c_radars";
 			name="Radars";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item97
+		class Item96
 		{
 			className="rhsgref_c_radar";
 			name="RHS GREF Radar";
 			author="Red Hammer Studios";
 			url="http://www.rhsmods.org/";
 		};
-		class Item98
+		class Item97
 		{
 			className="A3_Static_F_Sams";
 			name="Arma 3 Sams - Turrets";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item99
+		class Item98
 		{
 			className="UK3CB_Factions_Vehicles_Fishing_Vessel";
 			name="UK3CB_Factions_Vehicles_Fishing_Vessel";
 		};
-		class Item100
+		class Item99
 		{
 			className="UK3CB_Factions_Vehicles_Fishing_Boat";
 			name="UK3CB_Factions_Vehicles_Fishing_Boat";
 		};
-		class Item101
+		class Item100
 		{
 			className="UK3CB_Factions_ADR";
 			name="3CB Factions - ADR";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
-		class Item102
+		class Item101
 		{
 			className="CUP_Buildings_Config";
 			name="CUP_Buildings_Config";
 		};
-		class Item103
+		class Item102
 		{
 			className="A3_Props_F_Argo";
 			name="Arma 3 Malden - Decorative and Mission Objects";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item104
+		class Item103
 		{
 			className="A3_Structures_F_Enoch_Civilian";
 			name="Arma 3 Contact Platform - Civilian Buildings";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item105
+		class Item104
 		{
 			className="A3_Structures_F_EPB";
 			name="Arma 3 Adapt Episode - Buildings and Structures";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item106
+		class Item105
 		{
 			className="CUP_CAStructures_Nav_pier";
 			name="CUP_CAStructures_Nav_pier";
 		};
-		class Item107
+		class Item106
 		{
 			className="A3_Structures_F_Wrecks";
 			name="Arma 3 - Vehicle Wrecks";
 			author="Bohemia Interactive";
 			url="https://www.arma3.com";
 		};
-		class Item108
+		class Item107
 		{
 			className="CUP_CAStructures_E_Misc_Misc_Interier";
 			name="CUP_CAStructures_E_Misc_Misc_Interier";
 		};
-		class Item109
+		class Item108
 		{
 			className="Jbad_Misc_Construction";
 			name="Jbad_Misc_Construction";
@@ -12439,7 +12434,7 @@ class Mission
 							};
 							class Attributes
 							{
-								dynamicSimulation=1;
+								behaviour="CARELESS";
 							};
 							id=7305;
 							atlOffset=60.779999;
@@ -12715,7 +12710,7 @@ class Mission
 							{
 								text="WTF are you going?";
 								condition="{  if (typeOf _x == ""B_T_UGV_01_rcws_olive_F"") exitWith { true } } forEach thislist;";
-								onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "[""<t color='#99ffffff'>Mechanic</t>: WTF... where are you going? o_O"",-1,1,6,1,1] spawn BIS_fnc_dynamicText;" \n "0 spawn { " \n "    sleep 60;" \n "    [hangar, 2, 1] call BIS_fnc_Door;" \n "    [hangar, 3, 1] call BIS_fnc_Door;    " \n "    for ""_i"" from 0 to 10 do { playSound3D [""a3\sounds_f\sfx\alarm.wss"", siren]; sleep 1.7; };" \n "};";
+								onActivation="repair_guy call BIS_fnc_ambientAnim__terminate;" \n "[""<t color='#99ffffff'>Mechanic</t>: WTF... where are you going? o_O"",-1,1,6,1,1] spawn BIS_fnc_dynamicText;" \n "";
 								sizeA=4;
 								sizeB=7;
 								activationBy="ANY";
@@ -13017,7 +13012,7 @@ class Mission
 					{
 						text="Start airport scene";
 						condition="{  if (typeOf _x == ""B_T_UGV_01_rcws_olive_F"") exitWith { true } } forEach thislist;";
-						onActivation="blackfish_1 engineOn true;" \n "blackfish_2 engineOn true;" \n "gunship engineOn true;" \n "";
+						onActivation="0 spawn { " \n "    sleep 60;" \n "    [hangar, 2, 1] call BIS_fnc_Door;" \n "    [hangar, 3, 1] call BIS_fnc_Door; " \n "    for ""_i"" from 0 to 10 do { playSound3D [""a3\sounds_f\sfx\alarm.wss"", siren]; sleep 1.7; };" \n "    { _x enableAI ""PATH"" } forEach (units airport_patrol);" \n "};";
 						sizeA=31.586;
 						sizeB=22.082001;
 						activationBy="ANY";
@@ -15135,6 +15130,7 @@ class Mission
 									class Attributes
 									{
 										rank="SERGEANT";
+										init="this disableAI ""PATH"";";
 									};
 									id=7531;
 									type="B_T_Soldier_TL_F";
@@ -15153,6 +15149,7 @@ class Mission
 									{
 										skill=0.44999999;
 										rank="CORPORAL";
+										init="this disableAI ""PATH"";";
 									};
 									id=7532;
 									type="B_T_Soldier_AR_F";
@@ -15171,6 +15168,7 @@ class Mission
 									class Attributes
 									{
 										skill=0.40000001;
+										init="this disableAI ""PATH"";";
 									};
 									id=7533;
 									type="B_T_Soldier_F";
@@ -15189,6 +15187,7 @@ class Mission
 									class Attributes
 									{
 										skill=0.40000001;
+										init="this disableAI ""PATH"";";
 									};
 									id=7534;
 									type="B_T_Soldier_LAT2_F";
@@ -15200,7 +15199,7 @@ class Mission
 									loiterAltitude=-3.4028235e+38;
 									position[]={6819.2871,2.697,7325.1699};
 									expCond="hangar animationSourcePhase ""Door_2_sound_source"" == 1;";
-									expActiv="(group this) setCombatMode ""YELLOW"";";
+									expActiv="(group this) setCombatMode ""YELLOW"";" \n "";
 									class Effects
 									{
 									};
@@ -15261,6 +15260,7 @@ class Mission
 							};
 							class Attributes
 							{
+								name="airport_patrol";
 								combatMode="BLUE";
 								formation="COLUMN";
 								dynamicSimulation=1;
@@ -16816,7 +16816,6 @@ class Mission
 		{
 			dataType="Layer";
 			name="Funkturm 204";
-			state=1;
 			class Entities
 			{
 				items=17;
@@ -17168,7 +17167,6 @@ class Mission
 						dynamicSimulation=1;
 					};
 					id=8690;
-					atlOffset=60.779999;
 				};
 				class Item7
 				{
@@ -19673,7 +19671,7 @@ class Mission
 					state=1;
 					class Entities
 					{
-						items=22;
+						items=23;
 						class Item0
 						{
 							dataType="Object";
@@ -19769,24 +19767,6 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13764.738,201.43451,10944.72};
-								angles[]={0,1.996168,0};
-							};
-							side="Empty";
-							class Attributes
-							{
-								init="this setObjectTexture [1, ""a3\data_f\flags\flag_NATO_co.paa""];" \n "" \n "this addAction [""<t color='#00FF00'>Nach Layer-8-Problemen im NATO-Netzwerk suchen</t>"", { " \n "    params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];" \n "    hintC format [""Gegnerischer Stomper (der im Wartungsmodus war) bei Koordinate %1 wurde übernommen."", mapGridPosition maintenance_stomper]; " \n "    [maintenance_stomper] joinSilent (createGroup side _caller);" \n "    maintenance_stomper triggerDynamicSimulation true;" \n "    _caller connectTerminalToUAV maintenance_stomper;" \n "    [""rtt_event_startRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 5]; " \n "    " \n "    " \n "this addAction [""<t color='#FF0000'>Videostream beenden</t>"", { " \n "    [""rtt_event_stopRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 6, true, true, """", ""side _this == side maintenance_stomper || !alive maintenance_stomper""]; " \n "";
-								dynamicSimulation=1;
-							};
-							id=7363;
-							type="Land_Laptop_03_olive_F_AE3";
-							atlOffset=0.89605713;
-						};
-						class Item5
-						{
-							dataType="Object";
-							class PositionInfo
-							{
 								position[]={13765.886,200.53345,10955.097};
 								angles[]={0,3.5549929,0};
 							};
@@ -19799,7 +19779,7 @@ class Mission
 							id=7574;
 							type="Land_PortableServer_01_cover_black_F";
 						};
-						class Item6
+						class Item5
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19816,7 +19796,7 @@ class Mission
 							type="Land_PortableServer_01_cover_olive_F";
 							atlOffset=0.078216553;
 						};
-						class Item7
+						class Item6
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19833,7 +19813,7 @@ class Mission
 							id=7573;
 							type="Land_PortableServer_01_cover_olive_F";
 						};
-						class Item8
+						class Item7
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19850,13 +19830,13 @@ class Mission
 							type="Land_PortableServer_01_cover_black_F";
 							atlOffset=0.089019775;
 						};
-						class Item9
+						class Item8
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13765.978,202.30368,10949.826};
-								angles[]={0,5.6933861,0};
+								position[]={13766.081,202.30368,10949.945};
+								angles[]={0,5.4261489,0};
 							};
 							side="Empty";
 							flags=5;
@@ -19898,68 +19878,7 @@ class Mission
 								nAttributes=2;
 							};
 						};
-						class Item10
-						{
-							dataType="Object";
-							class PositionInfo
-							{
-								position[]={13767.681,201.20164,10952.205};
-								angles[]={0,4.8223796,0};
-							};
-							side="Empty";
-							flags=1;
-							class Attributes
-							{
-								dynamicSimulation=1;
-							};
-							id=7557;
-							type="RuggedTerminal_01_communications_F";
-							atlOffset=0.82699585;
-							class CustomAttributes
-							{
-								class Attribute0
-								{
-									property="allowDamage";
-									expression="_this allowdamage _value;";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=0;
-										};
-									};
-								};
-								class Attribute1
-								{
-									property="OpenTerminal";
-									expression="[_this,['Terminal_source','Terminal_source_sound'],_value*100,true] call bis_fnc_LinkTerminal_Animations";
-									class Value
-									{
-										class data
-										{
-											singleType="SCALAR";
-											value=0;
-										};
-									};
-								};
-								class Attribute2
-								{
-									property="hideObject";
-									expression="if !(is3DEN) then {_this hideobjectglobal _value;};";
-									class Value
-									{
-										class data
-										{
-											singleType="BOOL";
-											value=1;
-										};
-									};
-								};
-								nAttributes=3;
-							};
-						};
-						class Item11
+						class Item9
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19976,7 +19895,7 @@ class Mission
 							id=7564;
 							type="Land_PortableServer_01_olive_F";
 						};
-						class Item12
+						class Item10
 						{
 							dataType="Object";
 							class PositionInfo
@@ -19994,7 +19913,7 @@ class Mission
 							type="Land_PortableServer_01_black_F";
 							atlOffset=0.015060425;
 						};
-						class Item13
+						class Item11
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20011,13 +19930,13 @@ class Mission
 							type="Land_IPPhone_01_olive_F";
 							atlOffset=0.88520813;
 						};
-						class Item14
+						class Item12
 						{
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={13765.632,201.25502,10949.559};
-								angles[]={0,1.5133255,0};
+								position[]={13765.817,201.25502,10949.597};
+								angles[]={0,1.2460853,0};
 							};
 							side="Empty";
 							class Attributes
@@ -20028,7 +19947,7 @@ class Mission
 							type="Land_laptop_03_closed_olive_F";
 							atlOffset=0.71656799;
 						};
-						class Item15
+						class Item13
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20045,7 +19964,7 @@ class Mission
 							type="land_gm_euro_furniture_bed_02";
 							atlOffset=2.0480042;
 						};
-						class Item16
+						class Item14
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20062,7 +19981,7 @@ class Mission
 							type="Land_Camping_Light_off_F";
 							atlOffset=0.00042724609;
 						};
-						class Item17
+						class Item15
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20078,7 +19997,7 @@ class Mission
 							type="Land_Camping_Light_off_F";
 							atlOffset=0.81278992;
 						};
-						class Item18
+						class Item16
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20096,7 +20015,7 @@ class Mission
 							type="Land_CampingTable_small_F";
 							atlOffset=0.0002746582;
 						};
-						class Item19
+						class Item17
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20113,7 +20032,7 @@ class Mission
 							id=7577;
 							type="Land_PortableCabinet_01_4drawers_black_F";
 						};
-						class Item20
+						class Item18
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20131,7 +20050,7 @@ class Mission
 							type="Land_PortableWeatherStation_01_olive_F";
 							atlOffset=0.02557373;
 						};
-						class Item21
+						class Item19
 						{
 							dataType="Object";
 							class PositionInfo
@@ -20148,13 +20067,83 @@ class Mission
 							type="Land_PortableGenerator_01_black_F";
 							atlOffset=3.6803131;
 						};
+						class Item20
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13767.535,200.87798,10952.99};
+								angles[]={0,5.1561041,0};
+							};
+							side="Empty";
+							flags=4;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=9236;
+							type="Land_AirConditioner_03_F";
+							atlOffset=0.00022888184;
+						};
+						class Item21
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13769.182,201.02023,10952.049};
+								angles[]={0,0.43299872,0};
+							};
+							side="Empty";
+							flags=1;
+							class Attributes
+							{
+								dynamicSimulation=1;
+							};
+							id=9238;
+							type="Land_AirconCondenser_01_F";
+							atlOffset=0.86001587;
+						};
+						class Item22
+						{
+							dataType="Object";
+							class PositionInfo
+							{
+								position[]={13764.742,201.42606,10944.737};
+								angles[]={0,2.0193985,0};
+							};
+							side="Empty";
+							class Attributes
+							{
+								init="this addAction [""<t color='#00FF00'>Nach Layer-8-Problemen im NATO-Netzwerk suchen</t>"", { " \n "    params [""_target"", ""_caller"", ""_actionId"", ""_arguments""];" \n "    hintC format [""Gegnerischer Stomper (der im Wartungsmodus war) bei Koordinate %1 wurde übernommen."", mapGridPosition maintenance_stomper]; " \n "    [maintenance_stomper] joinSilent (createGroup side _caller);" \n "    maintenance_stomper triggerDynamicSimulation true;" \n "    _caller connectTerminalToUAV maintenance_stomper;" \n "    [""rtt_event_startRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 5]; " \n "    " \n "    " \n "this addAction [""<t color='#FF0000'>Videostream beenden</t>"", { " \n "    [""rtt_event_stopRTT"", nil] call CBA_fnc_globalEvent;    " \n "}, nil, 6, true, true, """", ""side _this == side maintenance_stomper || !alive maintenance_stomper""]; " \n "";
+							};
+							id=9240;
+							type="Land_Laptop_03_olive_F";
+							atlOffset=0.88760376;
+							class CustomAttributes
+							{
+								class Attribute0
+								{
+									property="ObjectTextureCustom1";
+									expression="_this setObjectTextureGlobal [1,_value]";
+									class Value
+									{
+										class data
+										{
+											singleType="STRING";
+											value="a3\data_f\flags\flag_NATO_co.paa";
+										};
+									};
+								};
+								nAttributes=1;
+							};
+						};
 					};
 					id=9084;
-					atlOffset=0.73446655;
+					atlOffset=0.59202576;
 				};
 			};
 			id=7333;
-			atlOffset=52.694595;
+			atlOffset=50.170052;
 		};
 		class Item52
 		{
@@ -28227,13 +28216,12 @@ class Mission
 								position[]={13186.022,14.161211,14027.688};
 							};
 							side="Empty";
-							flags=4;
 							class Attributes
 							{
 							};
 							id=7547;
 							type="Land_Camping_Light_F";
-							atlOffset=0.00041389465;
+							atlOffset=0.65616322;
 						};
 						class Item56
 						{
