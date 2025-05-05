@@ -5,7 +5,7 @@ class EditorData
 	angleGridStep=0.017453292;
 	scaleGridStep=1;
 	autoGroupingDist=10;
-	toggles=10;
+	toggles=1034;
 	class ItemIDProvider
 	{
 		nextID=9241;
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1922;
+		nextID=1979;
 	};
 	class Camera
 	{
-		pos[]={13761.854,202.44237,10946.056};
-		dir[]={0.85869282,-0.28679875,-0.42472717};
-		up[]={0.25707138,0.95799083,-0.1271528};
-		aside[]={-0.44335198,0,-0.89634758};
+		pos[]={12801.204,30.172499,14431.965};
+		dir[]={0.20652698,-0.4168413,-0.88522804};
+		up[]={0.094708636,0.9089759,-0.40594542};
+		aside[]={-0.97386587,-1.3802492e-07,-0.22721139};
 	};
 };
 binarizationWanted=0;
@@ -10038,19 +10038,20 @@ class Mission
 									dataType="Object";
 									class PositionInfo
 									{
-										position[]={12679.546,8.4479189,15322.313};
-										angles[]={0,6.0924463,0};
+										position[]={12679.546,8.447835,15322.313};
+										angles[]={0,6.0924387,0};
 									};
 									side="East";
 									flags=1;
 									class Attributes
 									{
+										init="this setUnitTrait [""UAVHacker"", true];";
 										description="Explosive Specialist";
 										isPlayable=1;
 									};
 									id=8559;
 									type="O_T_Soldier_Exp_F";
-									atlOffset=60.364082;
+									atlOffset=60.363998;
 									class CustomAttributes
 									{
 										class Attribute0
@@ -15459,11 +15460,10 @@ class Mission
 					};
 					id=8965;
 					type="B_UAV_02_dynamicLoadout_F";
-					atlOffset=2.3841858e-07;
 				};
 			};
 			id=7186;
-			atlOffset=6.05375;
+			atlOffset=6.0538149;
 		};
 		class Item36
 		{
@@ -20148,13 +20148,13 @@ class Mission
 		class Item52
 		{
 			dataType="Trigger";
-			position[]={12543.717,-0.016704559,13457.158};
+			position[]={11549.902,-0.016704559,13761.225};
 			angle=0.29691523;
 			class Attributes
 			{
 				text="players_crossing_channel";
 				onActivation="[(50*60), 0.9] remoteExec [""setOvercast"", 2]; " \n "{ " \n "    _x enableSimulationGlobal true;" \n "    (vehicle _x) enableSimulationGlobal true;" \n "} forEach units boats_west;" \n "";
-				sizeA=3220.731;
+				sizeA=4563.7983;
 				sizeB=356.10001;
 				activationBy="ANYPLAYER";
 				type="SWITCH";
@@ -20164,7 +20164,7 @@ class Mission
 			};
 			id=7371;
 			type="EmptyDetectorAreaR250";
-			atlOffset=24.806997;
+			atlOffset=28.05245;
 		};
 		class Item53
 		{
@@ -27344,7 +27344,6 @@ class Mission
 								onActivation="playSound3D [""z\crowsEW\addons\sounds\data\rooster_call.ogg"", chicken_coop];";
 								sizeA=3;
 								sizeB=3;
-								repeatable=1;
 								activationBy="ANYPLAYER";
 								triggerInterval=1;
 							};
@@ -27634,17 +27633,18 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={12808.14,3.3996499,14376.734};
+								position[]={12808.14,2.2594481,14376.734};
 								angles[]={0.021327924,3.1416276,6.2618575};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 								dynamicSimulation=1;
 							};
 							id=7411;
 							type="Land_Boat_02_abandoned_F";
-							atlOffset=1.3450001;
+							atlOffset=0.20479834;
 						};
 						class Item29
 						{
@@ -28216,12 +28216,13 @@ class Mission
 								position[]={13186.022,14.161211,14027.688};
 							};
 							side="Empty";
+							flags=4;
 							class Attributes
 							{
 							};
 							id=7547;
 							type="Land_Camping_Light_F";
-							atlOffset=0.65616322;
+							atlOffset=0.00041389465;
 						};
 						class Item56
 						{
@@ -28726,7 +28727,6 @@ class Mission
 				};
 			};
 			id=8964;
-			atlOffset=2.3841858e-07;
 		};
 		class Item79
 		{
