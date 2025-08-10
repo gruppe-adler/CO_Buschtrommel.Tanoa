@@ -7338,7 +7338,7 @@ class Mission
 								dynamicSimulation=1;
 							};
 							id=7839;
-							type="Land_DataTerminal_01_F";
+							type="Crows_dataterminal";
 							atlOffset=0.0038561821;
 							class CustomAttributes
 							{
@@ -7374,7 +7374,7 @@ class Mission
 								dynamicSimulation=1;
 							};
 							id=7844;
-							type="Land_DataTerminal_01_F";
+							type="Crows_dataterminal";
 							atlOffset=0.0033111572;
 							class CustomAttributes
 							{
@@ -9136,7 +9136,7 @@ class Mission
 								dynamicSimulation=1;
 							};
 							id=5565;
-							type="Land_DataTerminal_01_F";
+							type="Crows_dataterminal";
 							atlOffset=0.0085449219;
 							class CustomAttributes
 							{
