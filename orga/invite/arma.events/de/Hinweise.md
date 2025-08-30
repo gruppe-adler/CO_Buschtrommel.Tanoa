@@ -1,0 +1,9 @@
+- Die Waffensysteme der ***Seeadler*** stehen Ihnen  weitestgehend zur Feuerunterstützung zur Verfügung.
+  - ausgenommen SAM-Systeme
+   - ~Hauptgeschütz und VLS momentan noch in Wartung; sollte zeitnah wieder zur Verfügung stehen~
+  - fernzusteuern via UAVterminal
+- Sie können **feindliche autonome Systeme übernehmen**, wenn sie einen Operator mit UAV-Terminal physischen Zugang zum System ermöglichen (siehe [Hacking](https://armedassault.fandom.com/wiki/Hacking_(electronics))).
+  - Es empfiehlt sich diese zuvor mittels [Jamming](https://crowdedlight.github.io/Crows-Electronic-Warfare/jamming/drones.html) kampfunfähig zu machen.
+- Der **Handheld-Jammer kann von kleinen Schlauchbooten** aus eingesetzt werden. Von den großen Schnellbooten aus ist dies nicht möglich. Bedenken Sie das bei der Einsatztaktik!
+- Sollte ihr Sprengmeister nicht an jedes U-Boot direkt heran kommen, können sie eine ihrer **AR-2 Drohnen opfern um einen Sprengsatz daran zu befestigen** und ans U-Boot zu steuern.
+- **Ziviles Personal ist als  den Kombatanten zugehörig zu bewerten**, so es sich in der AO der Instandsetzung von unbemannten, militärischen Systemen widmet.
